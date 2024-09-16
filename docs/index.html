@@ -9,17 +9,17 @@
 </head>
 <body>
     <div class="open-image">
-        <img src="images/Clouds-left.png" class="clouds-left">
-        <img src="images/Clouds-right.png" class="clouds-right">
-        <img src="images/Logo.png" class="logo">
-        <img src="images/Background.png" class="background">
+        <img src="images/Clouds-left.png" class="clouds-left" alt="Clouds Left">
+        <img src="images/Clouds-right.png" class="clouds-right" alt="Clouds Right">
+        <img src="images/Logo.png" class="logo" alt="Logo">
+        <img src="images/Background.png" class="background" alt="Background">
     </div> 
 
-    <div id="home"class="video-anom">
-        <div> 
-             <video autoplay muted loop>
-            <source src="videos\anom.mp4" type="video/mp4">
-        </video>
+    <div id="home" class="video-anom">
+        <div>
+            <video autoplay muted loop>
+                <source src="videos/anom.mp4" type="video/mp4">
+            </video>
         </div>
       
         <div class="anom-text">
@@ -29,26 +29,23 @@
         <div class="social-icons-anom">
             <div class="icon-anom">
                 <a href="https://store.steampowered.com/app/2168120/Anomalistic_Revolution/" target="_blank">
-                    <img src="images\Steam.png" class="soft-anom" alt="Steam">
-                    <img src="boldImages\Steam_3.png" class="bold-anom" alt="Steam">
+                    <img src="images/Steam.png" class="soft-anom" alt="Steam">
+                    <img src="boldImages/Steam_3.png" class="bold-anom" alt="Steam">
                     <p>Steam</p> 
                 </a>
-                
             </div>
             <div class="icon-anom">
                 <a href="https://umigamestudios.itch.io/anomalistic-revolution" target="_blank">
-                    <img src="images\Itchio.png" class="soft-anom" alt="Itchio">
-                    <img src="boldImages\Itchio_3.png" class="bold-anom" alt="Itchio">
+                    <img src="images/Itchio.png" class="soft-anom" alt="Itchio">
+                    <img src="boldImages/Itchio_3.png" class="bold-anom" alt="Itchio">
                     <p>Itch.io</p> 
                 </a>
-              
             </div>
         </div>
-        
     </div>
 
     <div id="about-us" class="image-aboutUs">
-        <img src="images\CloudsAboutUs.png" class="cloudsAboutUs">
+        <img src="images/CloudsAboutUs.png" class="cloudsAboutUs" alt="Clouds About Us">
         <div class="about-us-text">
             <h2>About Us</h2>
             <p>Founded in 2024 at an incubation center in Türkiye, our studio, Umigame, specializes in developing story-oriented games. Our team consists of four dedicated members.</p>
@@ -68,60 +65,52 @@
         </div>
        
         <div class="collab-text">
-        <h2>Collaborations</h2>
-        <p>If you are interested in collaborating, please send resume and portfolio to<br> umigamestudios@gmail.com</p>
+            <h2>Collaborations</h2>
+            <p>If you are interested in collaborating, please send resume and portfolio to<br> umigamestudios@gmail.com</p>
         </div>
-
-       
     </div>
+
     <div id="where" class="where-text">
         <h2>Where to Find Us</h2>
         <div class="social-icons">
             <div class="icon">
                 <a href="https://twitter.com/UmigameStudios" target="_blank">
-                    <img src="images\X.png" class="soft" alt="Twitter">
-                    <img src="boldImages\X_3.png" class="bold" alt="Twitter">
+                    <img src="images/X.png" class="soft" alt="Twitter">
+                    <img src="boldImages/X_3.png" class="bold" alt="Twitter">
                     <p>Twitter</p> 
                 </a>
-              
             </div>
             <div class="icon">
                 <a href="https://www.tiktok.com/@anomalisticrevolution" target="_blank">
-                    <img src="images\TikTok.png" class="soft" alt="Tiktok">
-                    <img src="boldImages\TikTok_3.png" class="bold" alt="Tiktok">
+                    <img src="images/TikTok.png" class="soft" alt="Tiktok">
+                    <img src="boldImages/TikTok_3.png" class="bold" alt="Tiktok">
                     <p>TikTok</p> 
                 </a>
-                
             </div>
             <div class="icon">
                 <a href="https://instagram.com" target="_blank">
-                    <img src="images\Instagram.png" class="soft" alt="Instagram">
-                    <img src="boldImages\Instagram_3.png" class="bold" alt="Instagram">
+                    <img src="images/Instagram.png" class="soft" alt="Instagram">
+                    <img src="boldImages/Instagram_3.png" class="bold" alt="Instagram">
                     <p>Instagram</p> 
                 </a>
-            
             </div>
             <div class="icon">
                 <a href="https://store.steampowered.com/developer/umigame" target="_blank">
-                    <img src="images\Steam.png" class="soft" alt="Steam">
-                    <img src="boldImages\Steam_3.png" class="bold" alt="Steam">
+                    <img src="images/Steam.png" class="soft" alt="Steam">
+                    <img src="boldImages/Steam_3.png" class="bold" alt="Steam">
                     <p>Steam</p> 
                 </a>
-                
             </div>
             <div class="icon">
                 <a href="https://umigamestudios.itch.io/" target="_blank">
-                    <img src="images\Itchio.png" class="soft" alt="Itchio">
-                    <img src="boldImages\Itchio_3.png" class="bold" alt="Itchio">
+                    <img src="images/Itchio.png" class="soft" alt="Itchio">
+                    <img src="boldImages/Itchio_3.png" class="bold" alt="Itchio">
                     <p>Itch.io</p> 
                 </a>
-              
             </div>
         </div>
-    
     </div>
-    
-   
+
     <nav class="navbar">
         <ul>
             <li><a href="#home">Home</a></li>
@@ -135,112 +124,116 @@
     <main></main>
 
     <script>
-        let lastScrollTop = 0;
-        const navbar = document.querySelector('.navbar');
-        navbar.style.top = "-140px"; 
+        window.addEventListener('load', function() {
+            const navbar = document.querySelector('.navbar');
+            const homeSection = document.querySelector('#home');
 
-        function lockScroll() {
-            document.body.style.overflow = 'hidden'; 
-        }
+          
+            setTimeout(() => {
+                window.scrollTo(0, homeSection.offsetTop - navbar.offsetHeight);
+            }, 10);
 
-        function unlockScroll() {
-            document.body.style.overflow = ''; 
-        }
+            navbar.style.top = "-140px"; 
 
-        lockScroll();
+            function lockScroll() {
+                document.body.style.overflow = 'hidden'; 
+            }
 
-   
-        setTimeout(unlockScroll, 3900);
+            function unlockScroll() {
+                document.body.style.overflow = ''; 
+            }
+
+            lockScroll();
+
+            setTimeout(unlockScroll, 3900);
+
             setTimeout(() => {
                 navbar.style.top = "-140px"; 
                 const cloudsLeft = document.querySelector('.clouds-left');
                 const cloudsRight = document.querySelector('.clouds-right');
                 const logo = document.querySelector('.logo');
                 const background = document.querySelector('.background');
-         
+
                 cloudsLeft.style.left = "-1000px";
-          
                 cloudsRight.style.right = "-1000px";
+
                 setTimeout(() => {
                     cloudsRight.remove();
                     cloudsLeft.remove();
                     logo.remove();
                     background.remove();
-                }, 2800); // Bu süreyi ihtiyacınıza göre ayarlayabilirsiniz
-                logo.style.top="-180px"
+                }, 2800); 
+
+                logo.style.top = "-180px";
             }, 1000);
-       
 
-
-    
-        setTimeout(() => {
-            navbar.style.top = "0"; 
-        }, 4400);
-      
-   
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          
-            if (scrollTop > lastScrollTop) {
-                navbar.style.top = "-140px"; 
-            } else {
+            setTimeout(() => {
                 navbar.style.top = "0"; 
-            }
-    
-            lastScrollTop = scrollTop;
-        });
-    
-        
-        document.querySelectorAll('.navbar a').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault(); 
-                let targetSection;
-                let targetOffset;
-    
-                if (this.getAttribute('href') === '#about-us') {
-                    targetSection = document.querySelector('#about-us');
-                    targetOffset  = targetSection.offsetTop+100;
+            }, 4400);
 
-                } else if (this.getAttribute('href') === '#home') {
-                    targetSection = document.querySelector('#home');
-                    targetOffset = targetSection.offsetTop;
-                   
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-                } else if (this.getAttribute('href') === '#games') {
-                    targetSection = document.querySelector('#games');
-                    targetOffset = targetSection.offsetTop+100;
-
-                } else if (this.getAttribute('href') === '#contact') {
-                    targetSection = document.querySelector('#contact');
-                    targetOffset = targetSection.offsetTop+25;
-
-                }  else if (this.getAttribute('href') === '#where') {
-                    targetSection = document.querySelector('#where');
-                    targetOffset = targetSection.offsetTop+25;
-
+                if (scrollTop > lastScrollTop) {
+                    navbar.style.top = "-140px"; 
+                } else {
+                    navbar.style.top = "0"; 
                 }
-                if (targetSection) {
-                    window.scrollTo({
-                        top:  targetOffset - navbar.offsetHeight, 
-                        behavior: 'smooth'                        
-                    });
-                }
+
+                lastScrollTop = scrollTop;
             });
-        });
-        let inactivityTimeout;
-        const INACTIVITY_TIME = 10000; 
 
-        function resetInactivityTimer() {
-            clearTimeout(inactivityTimeout);
- 
-            inactivityTimeout = setTimeout(() => {
-                navbar.style.top = "-140px"; 
-            }, INACTIVITY_TIME);
-        }
-        document.addEventListener('mousemove', resetInactivityTimer);
-        document.addEventListener('keydown', resetInactivityTimer);
-        resetInactivityTimer();
+            document.querySelectorAll('.navbar a').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); 
+                    let targetSection;
+                    let targetOffset;
+
+                    if (this.getAttribute('href') === '#about-us') {
+                        targetSection = document.querySelector('#about-us');
+                        targetOffset  = targetSection.offsetTop + 100;
+
+                    } else if (this.getAttribute('href') === '#home') {
+                        targetSection = document.querySelector('#home');
+                        targetOffset = targetSection.offsetTop;
+
+                    } else if (this.getAttribute('href') === '#games') {
+                        targetSection = document.querySelector('#games');
+                        targetOffset = targetSection.offsetTop + 110;
+
+                    } else if (this.getAttribute('href') === '#contact') {
+                        targetSection = document.querySelector('#contact');
+                        targetOffset = targetSection.offsetTop + 25;
+
+                    } else if (this.getAttribute('href') === '#where') {
+                        targetSection = document.querySelector('#where');
+                        targetOffset = targetSection.offsetTop + 25;
+
+                    }
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetOffset - navbar.offsetHeight, 
+                            behavior: 'smooth'                        
+                        });
+                    }
+                });
+            });
+
+            let inactivityTimeout;
+            const INACTIVITY_TIME = 10000; 
+
+            function resetInactivityTimer() {
+                clearTimeout(inactivityTimeout);
+
+                inactivityTimeout = setTimeout(() => {
+                    navbar.style.top = "-140px"; 
+                }, INACTIVITY_TIME);
+            }
+            document.addEventListener('mousemove', resetInactivityTimer);
+            document.addEventListener('keydown', resetInactivityTimer);
+            resetInactivityTimer();
+        });
     </script>
-    
 </body>
 </html>
