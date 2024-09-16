@@ -27,6 +27,7 @@ body {
     margin-top: -120px;  
     z-index: 1000000;
     background-color: #faecd8; 
+    
    
  
 }
@@ -186,7 +187,8 @@ body {
 
 .image-aboutUs {
     position: relative; 
-    padding: 60px 20px;
+
+    padding-top:  60px;
 }
 
 .image-aboutUs img {
