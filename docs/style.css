@@ -84,34 +84,36 @@ body {
 
 .video-anom {
     position: relative; 
-    margin-top: 30px;
-    height: 1300px; 
+    margin-bottom: 10%;
     box-sizing: border-box; 
+    padding: 3.85% 0; 
+    padding-bottom: 30%;
+    
 }
 .video-anom video {
+    position: relative; 
+    margin-top: 0%;
     width: 75vw;  
     height: auto; 
     z-index: 1; 
-    margin: 0; 
-    padding-left: 210px;
-    padding-top: 4px; 
-    padding-bottom: 4px; 
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
+    padding-left: 12.5%;
+    padding-top: 2%; 
+    padding-bottom: 2%; 
+  
+ 
 }
 
 .anom-text {
   
     position: absolute;
-    top: 55%;
-    left: 28.5%;
+    margin-top: 8%;
+    margin-left: 28.5%;
     transform: translate(-50%, -10%);
     color: #A52A2A;
     text-align: left;
     font-family: Cagla;
     width: 50vw; 
-    max-width: 800px;
+
 }
 .anom-text h2 {
     font-size: 2.6em;
@@ -126,24 +128,16 @@ body {
     display: flex;
     justify-content: flex-start; 
     align-items: flex-start; 
-    margin-top: 400px;
+    margin-top: 8%;
 }
 
 
-.about-us-text h2 {
-    font-size: 2.6em;
-    margin-bottom: 20px;
-}
 
-.about-us-text p {
-    font-size: 1.8em;
-    line-height: 1.5; 
-}
 .icon-anom {
     position: relative;
     width:100vw;
     height: auto;
-    margin-right: 20px; 
+    margin-right: 50%; 
 }
 
 .icon-anom img {
@@ -154,82 +148,72 @@ body {
     width: 18vw;
     height: auto;
 }
-.icon-anom p {
-    position: relative;
-    font-family: Cagla;
-    top: 170px;
-    left: -45px;
-    font-size: 1.4em;
-    color: #A52A2A;
-    display: flex;
-    justify-content: center; 
-    text-decoration: none;
-}
-.icon-anom a {
-    text-decoration: none;
-}
+
 
 .icon-anom img.soft-anom {
     opacity: 1; 
 }
-
 .icon-anom img.bold-anom {
     opacity: 0;
 }
-
 .icon-anom:hover img.soft-anom {
     opacity: 0; 
 }
-
 .icon-anom:hover img.bold-anom {
     opacity: 1;
 }
 
-.image-aboutUs {
+.aboutUs{
     position: relative; 
-
-    padding-top:  60px;
+    margin-bottom: 10%;
+    box-sizing: border-box; 
+    padding: 5% 0; 
+    padding-bottom: 60%;
 }
-
-.image-aboutUs img {
-    display: block; 
-    max-width: 100vw; 
-    height: auto; 
-}
-
-.about-us-text {
+.aboutUs_text{
     position: absolute;
-    top: 6%;
-    left: 30%;
+    margin-top: 8%;
+    margin-left: 28.5%;
     transform: translate(-50%, -10%);
     color: #A52A2A;
     text-align: left;
     font-family: Cagla;
-    width: 80vw; 
-    max-width: 800px;
-}
+    width: 50vw; 
 
-.about-us-text h2 {
+}
+.aboutUs_text h2{
+    
     font-size: 2.6em;
     margin-bottom: 20px;
 }
-
-.about-us-text p {
+.aboutUs_text p{
     font-size: 1.8em;
     line-height: 1.5; 
 }
+.aboutUs_img{
+
+    position: absolute;
+    top: 16%;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
 
 
+}
+.aboutUs_img img {
+    width: 100%;
+    height: 100%;
 
+}
 
 
 .game-bar { 
     background-color: hsl(359, 72%, 32%); 
     position: relative;
-    padding: 600px 0; 
+    padding: 30vw 0; 
     text-align: center; 
     z-index: 1000; 
-    top: -60px;
+    top: 20%;
 }
 
 .game-text {
