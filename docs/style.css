@@ -137,15 +137,15 @@ body {
     position: relative;
     width:100vw;
     height: auto;
-    margin-right: 50%; 
+    margin-right: 35%; 
 }
 
 .icon-anom img {
     position: absolute;
     top: 0;
-    left: 25%; 
+    padding-left: 60%;
     transform: none;
-    width: 18vw;
+    width: 13vw;
     height: auto;
 }
 
@@ -321,7 +321,7 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 18vw;
+    width: 13vw;
     height: auto;
 }
 .icon p {
