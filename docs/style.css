@@ -102,7 +102,6 @@ body {
   
  
 }
-
 .anom-text {
   
     position: absolute;
@@ -110,7 +109,7 @@ body {
     margin-left: 28.5%;
     transform: translate(-50%, -10%);
     color: #A52A2A;
-    text-align: left;
+
     font-family: Cagla;
     width: 50vw; 
 
@@ -123,7 +122,9 @@ body {
 .anom-text p {
     font-size: 1.8em;
     line-height: 1.5; 
+    text-align: justify;
 }
+
 .social-icons-anom {
     display: flex;
     justify-content: flex-start; 
@@ -176,7 +177,7 @@ body {
     margin-left: 28.5%;
     transform: translate(-50%, -10%);
     color: #A52A2A;
-    text-align: left;
+
     font-family: Cagla;
     width: 50vw; 
 
@@ -188,6 +189,7 @@ body {
 }
 .aboutUs_text p{
     font-size: 1.8em;
+    text-align: justify;
     line-height: 1.5; 
 }
 .aboutUs_img{
@@ -210,20 +212,22 @@ body {
 .game-bar { 
     background-color: hsl(359, 72%, 32%); 
     position: relative;
-    padding: 30vw 0; 
+    padding-top: 23%;
+    padding-bottom: 5%;
     text-align: center; 
     z-index: 1000; 
-    top: 20%;
+
 }
 
 .game-text {
     position: absolute; 
-    top: 10%; 
+    top: 2%; 
     left: 50%; 
     transform: translate(-50%, -10%);
     color: #faecd8; 
-    text-align: center;
+
     font-family: Cagla;
+
   
 }
 .game-text h2
@@ -236,7 +240,65 @@ body {
 {
     font-size: 1.8em;
     line-height: 1.5; 
+    text-align: justify;
 }
+.other-wallpapers, .other-other-wallpapers {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+ 
+}
+
+.wallpaper-item {
+    margin: 10px; 
+    text-align: center; 
+    flex: 0 1 calc(50% - 20px);
+    display: flex; /* Flexbox kullan */
+    flex-direction: column; /* Dikey olarak hizala */
+    align-items: center; /* Yatay ortalama */
+    justify-content: center; /* Dikey ortalama */
+   
+}
+
+
+.anom-wallpaper img {
+    width: 100%; 
+    max-width: 30%;
+    height: auto; 
+}
+
+.anom-wallpaper h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #f8e7ce; 
+    font-family: Cagla;
+  
+}
+.anom-wallpaper p{
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.5; 
+    color: #f8e7ce; 
+    font-family: Cagla;
+    padding-bottom: 2.5%;
+}
+.other-wallpapers h2,.other-other-wallpapers h2  {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #f8e7ce; 
+    font-family: Cagla;
+  
+}
+.other-other-wallpapers p,.other-wallpapers p{
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.5; 
+    color: #f8e7ce; 
+    font-family: Cagla;
+    max-width:50%;
+}
+
+
 
 
 .contact-bar{   
@@ -357,43 +419,47 @@ body {
 
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
     background-color: hsl(359, 72%, 38%);
     z-index: 100000000000000000000; 
     transition: top 0.3s ease;
-    height: 100px; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around; 
-    align-items: center; 
-    width: 100vw; 
-    margin: 0; 
-    padding: 0; 
-}
-
-.navbar li {
+    height: 5vw; 
     display: flex; 
+    justify-content: space-between; 
     align-items: center; 
+
+
 }
 
-.navbar a {
+.navbar_text a {
     color: #f8e7ce; 
     text-decoration: none;
-    display: block;
-    text-align: center;
     font-family: MyCustomFont; 
     font-size: 26px;
-    padding: 10px 20px; 
+    padding: 10px 27.5px; 
 }
+.navbar-logo { 
+    height: 150%; 
+}
+
 
 .navbar a:hover {
     color: hsl(51, 71%, 77%);
+}
+@media (max-width: 1200px) {
+
+    .navbar_text a {
+        padding: 5px 14px; 
+        font-size: 17px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-logo { 
+        height: 150%; 
+        margin-right:20%; 
+    }
+    .navbar_text a {
+        padding: 5px 8px; 
+        font-size: 15px;
+    }
 }
