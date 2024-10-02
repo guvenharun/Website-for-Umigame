@@ -84,10 +84,12 @@ body {
 
 .video-anom {
     position: relative; 
-    margin-bottom: 10%;
+
     box-sizing: border-box; 
-    padding: 3.85% 0; 
-    padding-bottom: 30%;
+
+    padding-top: 2.5%;
+
+    padding-bottom: 35%;
     
 }
 .video-anom video {
