@@ -249,7 +249,7 @@ body {
 .other-other-other-wallpapers {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
     gap: 1.25rem;
@@ -264,8 +264,9 @@ body {
 .other-other-other-wallpapers .wallpaper-item {
     margin: 0;
     text-align: center;
-    flex: 1 1 calc(50% - 0.75rem);
-    max-width: calc(50% - 0.75rem);
+    flex: 1 1 0;
+    width: 0;
+    max-width: none;
     min-width: 0;
     display: flex;
     flex-direction: column;
@@ -278,12 +279,13 @@ body {
 .other-other-wallpapers .wallpaper-item img,
 .other-other-other-wallpapers .wallpaper-item img {
     width: 100%;
-    max-width: min(400px, 100%);
+    max-width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
     display: block;
+    flex-shrink: 0;
 }
 
 .other-wallpapers .wallpaper-item h2,
@@ -295,6 +297,10 @@ body {
     font-family: Cagla, sans-serif;
     font-weight: normal;
     line-height: 1.25;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .other-wallpapers .wallpaper-item p,
@@ -309,23 +315,7 @@ body {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-}
-
-@media (min-width: 769px) {
-    .other-wallpapers,
-    .other-other-wallpapers,
-    .other-other-other-wallpapers {
-        flex-wrap: nowrap;
-    }
-
-    .other-wallpapers .wallpaper-item,
-    .other-other-wallpapers .wallpaper-item,
-    .other-other-other-wallpapers .wallpaper-item {
-        flex: 1 1 0;
-        width: 0;
-        max-width: none;
-        min-width: 0;
-    }
+    overflow-wrap: break-word;
 }
 
 .anom-wallpaper img {
@@ -716,14 +706,17 @@ body {
     .other-wallpapers,
     .other-other-wallpapers,
     .other-other-other-wallpapers {
+        flex-wrap: nowrap;
         gap: clamp(0.5rem, 2vw, 1rem);
     }
     .other-wallpapers .wallpaper-item,
     .other-other-wallpapers .wallpaper-item,
     .other-other-other-wallpapers .wallpaper-item {
-        flex: 1 1 calc(100% - 20px);
-        max-width: calc(100% - 20px);
-        margin: clamp(6px, 2vw, 10px);
+        flex: 1 1 0;
+        width: 0;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
     }
     .other-wallpapers .wallpaper-item img,
     .other-other-wallpapers .wallpaper-item img,
@@ -850,6 +843,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    .other-wallpapers,
+    .other-other-wallpapers,
+    .other-other-other-wallpapers {
+        flex-wrap: wrap;
+    }
+
     .logo {
         width: min(55vw, 180px);
     }
@@ -901,6 +900,7 @@ body {
     .other-other-wallpapers .wallpaper-item,
     .other-other-other-wallpapers .wallpaper-item {
         flex: 1 1 100%;
+        width: auto;
         max-width: calc(100% - 16px);
     }
 }
