@@ -244,7 +244,9 @@ body {
     line-height: 1.5; 
     text-align: justify;
 }
-.other-wallpapers, .other-other-wallpapers {
+.other-wallpapers,
+.other-other-wallpapers,
+.other-other-other-wallpapers {
     display: flex; 
     justify-content: center; 
     flex-wrap: wrap; 
@@ -284,14 +286,18 @@ body {
     font-family: Cagla;
     padding-bottom: 2.5%;
 }
-.other-wallpapers h2,.other-other-wallpapers h2  {
+.other-wallpapers h2,
+.other-other-wallpapers h2,
+.other-other-other-wallpapers h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
     color: #f8e7ce; 
     font-family: Cagla;
   
 }
-.other-other-wallpapers p,.other-wallpapers p{
+.other-other-wallpapers p,
+.other-wallpapers p,
+.other-other-other-wallpapers p {
     text-align: center;
     font-size: 1.2em;
     line-height: 1.5; 
@@ -666,7 +672,8 @@ body {
     }
 
     .other-wallpapers,
-    .other-other-wallpapers {
+    .other-other-wallpapers,
+    .other-other-other-wallpapers {
         gap: clamp(0.5rem, 2vw, 1rem);
     }
     .wallpaper-item {
@@ -686,12 +693,14 @@ body {
     }
     .anom-wallpaper h2,
     .other-wallpapers h2,
-    .other-other-wallpapers h2 {
+    .other-other-wallpapers h2,
+    .other-other-other-wallpapers h2 {
         font-size: clamp(1.1rem, 4vw, 1.5rem);
     }
     .anom-wallpaper p,
     .other-wallpapers p,
-    .other-other-wallpapers p {
+    .other-other-wallpapers p,
+    .other-other-other-wallpapers p {
         font-size: clamp(0.9rem, 3.2vw, 1.1rem);
         max-width: 100%;
     }
