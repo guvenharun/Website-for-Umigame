@@ -248,13 +248,14 @@ body {
 .other-other-wallpapers,
 .other-other-other-wallpapers {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.25rem;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(1.5rem, 4vw, 2.25rem);
     width: 100%;
     max-width: 100%;
+    margin-bottom: clamp(1.25rem, 3vw, 2rem);
     padding: 0 clamp(8px, 2vw, 16px);
     box-sizing: border-box;
 }
@@ -262,12 +263,10 @@ body {
 .other-wallpapers .wallpaper-item,
 .other-other-wallpapers .wallpaper-item,
 .other-other-other-wallpapers .wallpaper-item {
+    width: 100%;
+    max-width: min(36rem, 100%);
     margin: 0;
     text-align: center;
-    flex: 1 1 0;
-    width: 0;
-    max-width: none;
-    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,10 +278,9 @@ body {
 .other-other-wallpapers .wallpaper-item img,
 .other-other-other-wallpapers .wallpaper-item img {
     width: 100%;
-    max-width: 100%;
+    max-width: min(100%, 520px);
     height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     display: block;
     flex-shrink: 0;
@@ -706,26 +704,26 @@ body {
     .other-wallpapers,
     .other-other-wallpapers,
     .other-other-other-wallpapers {
+        flex-direction: column;
         flex-wrap: nowrap;
-        gap: clamp(0.5rem, 2vw, 1rem);
+        align-items: center;
+        gap: clamp(1.25rem, 3.5vw, 2rem);
+        margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
     }
     .other-wallpapers .wallpaper-item,
     .other-other-wallpapers .wallpaper-item,
     .other-other-other-wallpapers .wallpaper-item {
-        flex: 1 1 0;
-        width: 0;
-        max-width: none;
-        min-width: 0;
+        width: 100%;
+        max-width: min(36rem, 100%);
         margin: 0;
     }
     .other-wallpapers .wallpaper-item img,
     .other-other-wallpapers .wallpaper-item img,
     .other-other-other-wallpapers .wallpaper-item img {
         width: 100%;
-        max-width: 100%;
+        max-width: min(100%, 480px);
         height: auto;
-        aspect-ratio: 16 / 9;
-        object-fit: cover;
+        object-fit: contain;
         display: block;
     }
     .anom-wallpaper img {
@@ -843,12 +841,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .other-wallpapers,
-    .other-other-wallpapers,
-    .other-other-other-wallpapers {
-        flex-wrap: wrap;
-    }
-
     .logo {
         width: min(55vw, 180px);
     }
@@ -899,8 +891,6 @@ body {
     .other-wallpapers .wallpaper-item,
     .other-other-wallpapers .wallpaper-item,
     .other-other-other-wallpapers .wallpaper-item {
-        flex: 1 1 100%;
-        width: auto;
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 }
