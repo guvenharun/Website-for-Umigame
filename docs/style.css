@@ -25,7 +25,7 @@ body {
     height: 110px; 
     box-sizing: border-box; 
     margin-top: -120px;  
-    z-index: 1000000;
+    z-index: 500;
     background-color: #faecd8; 
     
    
@@ -41,7 +41,7 @@ body {
     max-width: 100vw; 
     transition: all 4s ease; 
     left: 0;
-    z-index: 10000000;
+    z-index: 2;
     
 }
 .clouds-right{
@@ -49,7 +49,7 @@ body {
     height: auto;
     max-width: 100vw; 
     transition: all 4s ease; 
-    z-index: 10000000;
+    z-index: 2;
     right: 0; 
 }
 .logo{
@@ -60,7 +60,7 @@ body {
     width: 30vw; 
     height: auto; 
     transition: all 4.75s ease; 
-    z-index: 10000000;
+    z-index: 3;
 }
 .background{
     
@@ -421,14 +421,21 @@ body {
 
 .navbar {
     position: fixed;
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
     background-color: hsl(359, 72%, 38%);
-    z-index: 100000000000000000000; 
+    z-index: 5000; 
     transition: top 0.3s ease;
     height: 5vw; 
+    min-height: clamp(44px, 5vw, 72px);
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    padding: 0 clamp(8px, 2vw, 16px);
+    gap: 8px;
 
 
 }
@@ -456,12 +463,372 @@ body {
     }
 }
 @media (max-width: 768px) {
-    .navbar-logo { 
-        height: 150%; 
-        margin-right:20%; 
+    .open-image {
+        max-width: 100vw;
+        overflow: hidden;
+    }
+    .open-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    .logo {
+        width: min(42vw, 200px);
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 6px;
+        min-height: clamp(48px, 12vw, 64px);
+        height: auto;
+        padding: 8px clamp(10px, 3vw, 14px);
+    }
+    .navbar-logo {
+        height: clamp(28px, 8vw, 40px);
+        width: auto;
+        max-width: 38%;
+        object-fit: contain;
+        margin-right: 0;
+        flex-shrink: 0;
+    }
+    .navbar_text {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4px 6px;
+        max-width: 100%;
+        flex: 1 1 auto;
+        min-width: 0;
     }
     .navbar_text a {
-        padding: 5px 8px; 
-        font-size: 15px;
+        padding: 8px clamp(6px, 2vw, 10px);
+        font-size: clamp(12px, 3.2vw, 15px);
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+    .navbar_text a[href="javascript:void(0);"] {
+        padding: 8px 10px;
+        margin-left: 4px;
+    }
+
+    .video-anom {
+        padding-top: clamp(0.75rem, 3vw, 1.25rem);
+        padding-bottom: clamp(1.5rem, 6vw, 2.5rem);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    .video-anom > div:first-child {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 clamp(0.75rem, 4vw, 1.25rem);
+    }
+    .video-anom video {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: clamp(0.5rem, 2vw, 1rem);
+        padding-bottom: clamp(0.5rem, 2vw, 1rem);
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .anom-text {
+        position: relative;
+        margin: clamp(1rem, 4vw, 1.5rem) auto 0;
+        margin-left: auto;
+        margin-right: auto;
+        transform: none;
+        width: min(100%, 36rem);
+        max-width: 100%;
+        padding: 0 clamp(0.75rem, 4vw, 1.25rem);
+        box-sizing: border-box;
+    }
+    .anom-text h2 {
+        font-size: clamp(1.35rem, 5vw, 1.85rem);
+        margin-bottom: clamp(10px, 3vw, 16px);
+    }
+    .anom-text p {
+        font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+        line-height: 1.55;
+        text-align: left;
+        hyphens: auto;
+    }
+
+    .social-icons-anom {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(0.75rem, 4vw, 1.25rem);
+        margin-top: clamp(1rem, 4vw, 1.5rem);
+    }
+    .icon-anom {
+        width: auto;
+        flex: 1 1 calc(50% - 12px);
+        max-width: calc(50% - 8px);
+        min-width: 0;
+        margin-right: 0;
+        min-height: clamp(56px, 18vw, 88px);
+    }
+    .icon-anom a {
+        display: block;
+        position: relative;
+        width: 100%;
+        min-height: clamp(48px, 16vw, 72px);
+    }
+    .icon-anom img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 0;
+        width: clamp(100px, 38vw, 160px);
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .aboutUs {
+        padding: clamp(1.5rem, 5vw, 2.5rem) clamp(0.75rem, 4vw, 1.25rem);
+        padding-bottom: clamp(14rem, 52vw, 20rem);
+        margin-bottom: clamp(6%, 10vw, 10%);
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    .aboutUs_text {
+        position: relative;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        transform: none;
+        width: min(100%, 36rem);
+        max-width: 100%;
+        padding: 0;
+        z-index: 2;
+    }
+    .aboutUs_text h2 {
+        font-size: clamp(1.35rem, 5vw, 1.85rem);
+        margin-bottom: clamp(10px, 3vw, 16px);
+    }
+    .aboutUs_text p {
+        font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+        text-align: left;
+        line-height: 1.55;
+    }
+    .aboutUs_img {
+        top: auto;
+        bottom: 0;
+        height: clamp(45%, 55vw, 58%);
+        left: 0;
+        width: 100%;
+        pointer-events: none;
+    }
+    .aboutUs_img img {
+        object-fit: cover;
+        object-position: center bottom;
+    }
+
+    .game-bar {
+        padding-top: clamp(1.25rem, 6vw, 2rem);
+        padding-left: clamp(0.75rem, 4vw, 1.25rem);
+        padding-right: clamp(0.75rem, 4vw, 1.25rem);
+        padding-bottom: clamp(1.25rem, 5vw, 2rem);
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    .game-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        max-width: 36rem;
+        margin: 0 auto clamp(1.25rem, 5vw, 2rem);
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .game-text h2 {
+        font-size: clamp(1.35rem, 5vw, 1.85rem);
+        margin-bottom: clamp(10px, 3vw, 16px);
+    }
+    .game-text p {
+        font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+        line-height: 1.55;
+        text-align: left;
+    }
+
+    .other-wallpapers,
+    .other-other-wallpapers {
+        gap: clamp(0.5rem, 2vw, 1rem);
+    }
+    .wallpaper-item {
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        margin: clamp(6px, 2vw, 10px);
+    }
+    .wallpaper-item img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .anom-wallpaper img {
+        max-width: min(100%, 280px);
+        width: 100%;
+        height: auto;
+    }
+    .anom-wallpaper h2,
+    .other-wallpapers h2,
+    .other-other-wallpapers h2 {
+        font-size: clamp(1.1rem, 4vw, 1.5rem);
+    }
+    .anom-wallpaper p,
+    .other-wallpapers p,
+    .other-other-wallpapers p {
+        font-size: clamp(0.9rem, 3.2vw, 1.1rem);
+        max-width: 100%;
+    }
+
+    .contact-bar {
+        height: auto;
+        min-height: 220px;
+        padding-bottom: clamp(1rem, 4vw, 1.5rem);
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    .contact,
+    .collab-text {
+        margin-left: 0;
+        padding-left: clamp(0.75rem, 4vw, 1.25rem);
+        padding-right: clamp(0.75rem, 4vw, 1.25rem);
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .contact {
+        margin-top: clamp(28px, 8vw, 50px);
+    }
+    .contact h2 {
+        font-size: clamp(1.35rem, 5vw, 1.85rem);
+    }
+    .collab-text {
+        margin-top: clamp(36px, 8vw, 56px);
+    }
+    .collab-text h2 {
+        font-size: clamp(1.1rem, 4vw, 1.45rem);
+    }
+    .collab-text p {
+        font-size: clamp(0.9rem, 3.2vw, 1.05rem);
+    }
+
+    .where-text {
+        height: auto;
+        min-height: 0;
+        margin-left: 0;
+        margin-top: clamp(36px, 8vw, 56px);
+        padding: 0 clamp(0.75rem, 4vw, 1.25rem) clamp(2rem, 8vw, 3rem);
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .where-text h2 {
+        font-size: clamp(1.1rem, 4vw, 1.45rem);
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: clamp(0.75rem, 3vw, 1rem);
+        row-gap: clamp(2.5rem, 10vw, 3.5rem);
+        margin-top: clamp(1rem, 4vw, 1.5rem);
+        max-width: 100%;
+    }
+    .where-text .icon {
+        position: relative;
+        flex: 0 1 calc(33.333% - 12px);
+        max-width: calc(33.333% - 8px);
+        min-width: 72px;
+        width: auto;
+        height: auto;
+        min-height: clamp(5.5rem, 22vw, 7rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .where-text .icon a {
+        display: block;
+        position: relative;
+        width: 100%;
+        min-height: clamp(48px, 18vw, 64px);
+    }
+    .where-text .icon img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: clamp(44px, 14vw, 64px);
+        max-width: 100%;
+        height: auto;
+    }
+    .where-text .icon p {
+        top: auto;
+        margin-top: 0.35rem;
+        font-size: clamp(0.75rem, 2.8vw, 0.95rem);
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: min(55vw, 180px);
+    }
+
+    .navbar_text a {
+        font-size: clamp(11px, 3.5vw, 13px);
+        padding: 6px 5px;
+    }
+    .navbar_text a[href="#where"] {
+        white-space: normal;
+        max-width: 9rem;
+        text-align: center;
+        line-height: 1.15;
+    }
+
+    .anom-text h2,
+    .aboutUs_text h2,
+    .game-text h2,
+    .contact h2 {
+        font-size: clamp(1.2rem, 5.5vw, 1.55rem);
+    }
+
+    .icon-anom {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .icon-anom img {
+        width: min(200px, 70vw);
+    }
+
+    .where-text .icon {
+        flex: 0 1 calc(50% - 10px);
+        max-width: calc(50% - 8px);
+        min-width: 0;
+    }
+    .where-text .icon img {
+        width: clamp(40px, 22vw, 56px);
+    }
+
+    .wallpaper-item {
+        flex: 1 1 100%;
+        max-width: calc(100% - 16px);
     }
 }
