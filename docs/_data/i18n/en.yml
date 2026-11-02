@@ -58,10 +58,9 @@ splash:
   skip: Skip intro
 home:
   eyebrow: Independent game studio · Türkiye
-  title_a: We make games
-  title_b: that tell
-  title_c: stories.
-  lead: Indie games shaped by psychological depth, handcrafted visuals, and haunting narratives.
+  title_a: Indie games shaped by psychological depth, handcrafted visuals, and
+  title_b: haunting narratives.
+  lead: Umigame is a small team building story-oriented games with strange worlds, hard choices and characters worth remembering.
   btn_works: Explore our works
   btn_contact: Get in touch
   featured: Featured game

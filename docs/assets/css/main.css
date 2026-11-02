@@ -164,7 +164,7 @@ h1 em { font-style: normal; color: var(--accent); }
     linear-gradient(to bottom, var(--bg), transparent 18%, transparent 80%, var(--bg));
 }
 .hero-inner { position: relative; z-index: 2; }
-.hero h1 { max-width: 14ch; }
+.hero h1 { max-width: 26ch; font-size: clamp(2rem, 5.3vw, 3.9rem); line-height: 1.06; text-wrap: balance; } /* long slogan: smaller than the page-title size */
 .hero .lead { font-size: 1.2rem; }
 
 .page-hero {
