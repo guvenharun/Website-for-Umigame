@@ -2,7 +2,7 @@
 ref: highschool-j
 lang: en
 title: "Highschool J"
-order: 4
+order: 1
 genre: "Adventure · Psychological Horror"
 tagline: "Some presences cannot be resisted. Only surrender is possible."
 cover: /assets/img/games/highschool-j.jpg

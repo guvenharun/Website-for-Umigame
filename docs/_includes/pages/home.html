@@ -1,6 +1,6 @@
 {%- assign t = site.data.i18n[page.lang] -%}
 {%- if page.lang == "tr" -%}{%- assign works = site.works_tr | sort: "order" -%}{%- else -%}{%- assign works = site.works | sort: "order" -%}{%- endif -%}
-{%- assign featured = works | first -%}
+{%- assign featured = works | where: "featured", true | first -%}
 <section class="hero">
   <div class="container hero-inner">
     <p class="eyebrow">{{ t.home.eyebrow }}</p>
@@ -45,7 +45,7 @@
       <a class="btn btn-link" href="{{ t.base | append: '/works/' | relative_url }}">{{ t.ui.view_all }} <span aria-hidden="true">→</span></a>
     </div>
     <div class="feature-grid">
-      {% for w in works limit: 3 %}{% include work-feature.html work=w %}{% endfor %}
+      {% for w in works %}{% include work-feature.html work=w %}{% endfor %}
     </div>
   </div>
 </section>

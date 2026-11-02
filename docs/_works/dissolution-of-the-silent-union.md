@@ -2,7 +2,7 @@
 ref: dissolution-of-the-silent-union
 lang: en
 title: "Dissolution of the Silent Union"
-order: 2
+order: 3
 genre: "Visual Novel"
 tagline: "A short, narrative-driven visual novel."
 cover: /assets/img/games/dissolution-of-the-silent-union.jpg

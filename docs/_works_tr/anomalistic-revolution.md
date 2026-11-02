@@ -2,7 +2,8 @@
 ref: anomalistic-revolution
 lang: tr
 title: "Anomalistic Revolution"
-order: 1
+featured: true
+order: 2
 genre: "RPG · Koşu"
 tagline: "Anime tarzında, koşu mekanikli RPG macerası."
 cover: /assets/img/games/anomalistic-revolution.jpg

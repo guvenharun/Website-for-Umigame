@@ -2,7 +2,7 @@
 ref: dissolution-of-the-silent-union
 lang: tr
 title: "Dissolution of the Silent Union"
-order: 2
+order: 3
 genre: "Görsel Roman"
 tagline: "Kısa, anlatı odaklı bir görsel roman."
 cover: /assets/img/games/dissolution-of-the-silent-union.jpg

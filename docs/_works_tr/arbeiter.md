@@ -2,7 +2,7 @@
 ref: arbeiter
 lang: tr
 title: "Arbeiter"
-order: 3
+order: 4
 genre: "Hayatta Kalma · Yönetim"
 tagline: "İş gününü atlatmaya çalışmayı anlatan bir hayatta kalma ve yönetim oyunu."
 cover: /assets/img/games/arbeiter.jpg

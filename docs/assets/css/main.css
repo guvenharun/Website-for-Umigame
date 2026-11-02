@@ -283,6 +283,7 @@ h1 em { font-style: normal; color: var(--accent); }
 @media (min-width: 700px) {
   :root { --gutter: 32px; --header-h: 72px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
   .split { grid-template-columns: 1fr 1.6fr; gap: 48px; }
   .work-body { grid-template-columns: 1.6fr 1fr; gap: 56px; }
   .values { grid-template-columns: repeat(3, 1fr); }
@@ -305,7 +306,6 @@ h1 em { font-style: normal; color: var(--accent); }
   .site-nav a::after { content: ""; position: absolute; left: 16px; right: 16px; bottom: 4px; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform .25s; }
   .site-nav a:hover::after, .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
   .grid { grid-template-columns: repeat(3, 1fr); }
-  .feature-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
   .feature-body { padding: 28px 26px 30px; }
   .site-nav { margin-left: auto; margin-right: 20px; }
   .header-actions { margin-left: 0; }

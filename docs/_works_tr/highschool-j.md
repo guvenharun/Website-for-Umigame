@@ -2,7 +2,7 @@
 ref: highschool-j
 lang: tr
 title: "Highschool J"
-order: 4
+order: 1
 genre: "Macera · Psikolojik Korku"
 tagline: "Bazı varlıklara karşı koyamazsınız. Sadece teslim olabilirsiniz."
 cover: /assets/img/games/highschool-j.jpg

@@ -2,7 +2,7 @@
 ref: arbeiter
 lang: en
 title: "Arbeiter"
-order: 3
+order: 4
 genre: "Survival · Management"
 tagline: "A survival-management game about getting through the workday."
 cover: /assets/img/games/arbeiter.jpg
