@@ -1,0 +1,91 @@
+lang: tr
+base: /tr
+html_lang: tr
+switch: { label: EN, name: English, code: en }
+nav:
+  - { title: Ana Sayfa, url: / }
+  - { title: Oyunlar, url: /works/ }
+  - { title: Hakkımızda, url: /about/ }
+  - { title: İletişim, url: /contact/ }
+ui:
+  skip: İçeriğe geç
+  menu: Menü
+  all_works: Tüm oyunlar
+  trailer: Fragman
+  view_game: Oyunu gör
+  view_all: Tümünü gör
+  learn_more: Daha fazlası
+  game_info: Künye
+  developer: Geliştirici
+  genre: Tür
+  platform: Platform
+  release: Çıkış
+  follow: Bizi takip edin
+  footer_tag: Bağımsız oyun stüdyosu · Türkiye
+  rights: Tüm hakları saklıdır.
+  not_found_back: Ana sayfaya dön
+site:
+  description: Umigame, Türkiye'den hikâye odaklı oyunlar geliştiren bağımsız bir oyun stüdyosudur. Anomalistic Revolution bu oyunlardan biridir.
+pages:
+  home: { description: "Umigame, Türkiye'den hikâye odaklı oyunlar geliştiren bağımsız bir oyun stüdyosudur. Anomalistic Revolution bu oyunlardan biridir." }
+  works:
+    title: Oyunlar
+    eyebrow: Oyunlarımız
+    lead: Umigame olarak oyunculara benzersiz deneyimler sunan, keyifli oyunlar yapmayı hedefliyoruz. Her biri, farklı türlerde, özenle geliştiriliyor.
+    description: Umigame'nin yaptığı tüm oyunlar; Anomalistic Revolution'dan görsel romanlarımıza ve macera oyunlarımıza.
+  about:
+    title: Hakkımızda
+    eyebrow: Stüdyo
+    lead: 2024'te Türkiye'de bir kuluçka merkezinde kurulan Umigame, hikâye odaklı oyunlar geliştirmeye odaklanıyor.
+    description: Umigame, 2024'te Türkiye'de kurulan, hikâye odaklı oyunlara odaklanan beş kişilik bağımsız bir oyun stüdyosudur.
+  contact:
+    title: İletişim
+    eyebrow: Merhaba deyin
+    lead: Sorularınız, basın talepleriniz ya da iş birliği için bize ulaşın.
+    description: İş birlikleri, basın ve genel sorular için Umigame ile iletişime geçin.
+  notfound:
+    title: Sayfa bulunamadı
+    eyebrow: "404"
+    lead: Bu sayfa yok ya da taşınmış.
+home:
+  eyebrow: Bağımsız oyun stüdyosu · Türkiye
+  title_a: Hikâye anlatan
+  title_b: oyunlar
+  title_c: yapıyoruz.
+  lead: Umigame; tuhaf dünyalar, zor kararlar ve akılda kalacak karakterler barındıran, hikâye odaklı oyunlar geliştiren küçük bir ekip.
+  btn_works: Oyunlarımızı keşfedin
+  btn_contact: İletişime geçin
+  featured: Öne çıkan oyun
+  works_eyebrow: Oyunlarımız
+  works_title: Yaptığımız oyunlar
+  about_eyebrow: Stüdyo hakkında
+  about_title: 2024'te kuruldu, anlatı üzerine kurulu
+  about_text: Umigame, Türkiye'de bir kuluçka merkezinde kuruldu. Hikâye odaklı oyunlar geliştiriyoruz; ekibimiz beş özverili üyeden oluşuyor.
+  about_more: Bizi daha yakından tanıyın
+  cta_title: Bizimle çalışmak ister misiniz?
+  cta_text: Özgeçmişinizi ve portfolyonuzu gönderin, birlikte neler yapmak istediğinizi anlatın.
+  cta_btn: İletişime geçin
+about:
+  who_title: Biz kimiz
+  who_1: Stüdyomuz Umigame, 2024'te Türkiye'de bir kuluçka merkezinde kuruldu. Ekibimiz beş özverili üyeden oluşuyor.
+  who_2: Oyunculara benzersiz deneyimler sunan, keyifli oyunlar yapmayı amaçlıyoruz. Koleksiyonumuz, her biri özenle geliştirilmiş çeşitli türleri kapsıyor. Kendimizi geliştirmek ve yeni fikirleri keşfetmek için yoldayız; bu yolculukta desteğiniz için teşekkür ederiz.
+  what_eyebrow: Ne yapıyoruz
+  what_title: Oyunları nasıl yapıyoruz
+  values:
+    - { title: Önce hikâye, text: "Seçimlerin ve karakterlerin deneyimi yönlendirdiği, hikâye odaklı oyunlar geliştiriyoruz." }
+    - { title: Birçok tür, text: "RPG maceralarından görsel romanlara, hayatta kalma-yönetim ve aksiyon-macera oyunlarına kadar." }
+    - { title: Özenle yapılır, text: "Her oyun özenle geliştiriliyor; kendimizi geliştirmeye ve yeni fikirleri keşfetmeye devam ediyoruz." }
+  stat_founded: Kuruluş
+  stat_team: Ekip üyesi
+  stat_games: Oyun
+  cta_title: Yaptıklarımıza göz atın
+  cta_btn: Oyunlarımızı keşfedin
+contact:
+  collab_title: İş birlikleri
+  collab_text: "İş birliği yapmak istiyorsanız, lütfen özgeçmişinizi ve portfolyonuzu şu adrese gönderin:"
+  collab_btn: E-posta gönder
+  collab_subject: İş birliği
+  community_title: Topluluğa katılın
+  community_text: Geliştirme sürecimizi takip edin, ekip ve diğer oyuncularla Discord'da sohbet edin.
+  community_btn: Discord'a katıl
+  online_title: Bizi çevrimiçi bulun

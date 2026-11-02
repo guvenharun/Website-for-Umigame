@@ -1,0 +1,17 @@
+{%- comment -%} Tall card with description + game info, used on the Home page. {%- endcomment -%}
+{%- assign w = include.work -%}
+{%- assign t = site.data.i18n[w.lang] -%}
+<article class="feature-card">
+  <a class="feature-media" href="{{ w.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ w.cover | relative_url }}" alt="" loading="lazy" width="{{ w.cover_w | default: 460 }}" height="{{ w.cover_h | default: 215 }}">
+  </a>
+  <div class="feature-body">
+    {% if w.genre %}<p class="tag">{{ w.genre }}</p>{% endif %}
+    <h3><a href="{{ w.url | relative_url }}">{{ w.title }}</a></h3>
+    <p class="feature-lead">{{ w.tagline }}</p>
+    <p class="feature-desc">{{ w.content | strip_html | strip | truncatewords: 38 }}</p>
+    <p class="meta-title">{{ t.ui.game_info }}</p>
+    {% include work-meta.html work=w %}
+    <a class="card-cta" href="{{ w.url | relative_url }}">{{ t.ui.view_game }} <span aria-hidden="true">→</span></a>
+  </div>
+</article>

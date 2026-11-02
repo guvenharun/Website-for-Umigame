@@ -8,24 +8,28 @@ Source of [umigamestudios.com](https://umigamestudios.com), the website of Umiga
 docs/
 ├── _config.yml        site settings (title, url, email, collections)
 ├── _layouts/          default, page, work
-├── _includes/         header, footer, socials, work-card
+├── _includes/         header, footer, socials, work cards, pages/ (page bodies)
 ├── _data/
-│   ├── nav.yml        main navigation
+│   ├── i18n/en.yml    all English UI text + navigation
+│   ├── i18n/tr.yml    all Turkish UI text + navigation
 │   └── socials.yml    social links (footer + Contact page)
-├── _works/            one Markdown file per game
+├── _works/            one Markdown file per game (English)
+├── _works_tr/         the same games in Turkish
 ├── assets/            css, js, fonts, img, video
-├── index.html         Home
-├── works/ about/ contact/
+├── index.html, works/, about/, contact/        English pages
+├── tr/                                         Turkish pages (/tr/…)
 └── CNAME              custom domain — do not delete
 ```
 
 ## Common tasks
 
-**Add a game:** copy any file in `docs/_works/`, change the front matter (`title`, `order`, `tagline`, `cover`, `links`) and write the description below it. Put the cover image in `docs/assets/img/games/`. The Works page and Home page update automatically.
+**Add a game:** copy a file in `docs/_works/` **and** the matching one in `docs/_works_tr/` (they must share the same `ref`). Change the front matter (`title`, `order`, `genre`, `tagline`, `cover`, `links`) and write the description below it. Optional "künye" fields: `developer`, `platforms`, `release`. Put the cover image in `docs/assets/img/games/`. The Works and Home pages update automatically.
+
+**Change site text or translations:** edit `docs/_data/i18n/en.yml` and `tr.yml`. The language button in the header links each page to its counterpart through the shared `ref`.
 
 **Change a social link:** edit `docs/_data/socials.yml`.
 
-**Change colors:** edit the variables at the top of `docs/assets/css/main.css` (`--accent`, `--bg`, …).
+**Change colors:** edit the variables at the top of `docs/assets/css/main.css` (`--accent`, `--bg`, …). The "umigame" wordmark uses the self-hosted Caveat Brush font (SIL Open Font License).
 
 ## Run locally
 

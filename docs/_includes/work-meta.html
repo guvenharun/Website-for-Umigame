@@ -1,0 +1,9 @@
+{%- comment -%} Game info ("künye") list. Prints only the fields that exist. Usage: include work-meta.html work=w {%- endcomment -%}
+{%- assign w = include.work -%}
+{%- assign t = site.data.i18n[w.lang] -%}
+<dl class="meta">
+  <div><dt>{{ t.ui.developer }}</dt><dd>{{ w.developer | default: "Umigame" }}</dd></div>
+  {% if w.genre %}<div><dt>{{ t.ui.genre }}</dt><dd>{{ w.genre }}</dd></div>{% endif %}
+  {% if w.platforms %}<div><dt>{{ t.ui.platform }}</dt><dd>{{ w.platforms }}</dd></div>{% endif %}
+  {% if w.release %}<div><dt>{{ t.ui.release }}</dt><dd>{{ w.release }}</dd></div>{% endif %}
+</dl>

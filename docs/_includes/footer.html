@@ -1,23 +1,24 @@
+{%- assign t = site.data.i18n[page.lang] -%}
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
       <img src="{{ '/assets/img/logo-light.png' | relative_url }}" alt="" width="36" height="47">
-      <p>Umigame<br><span>Independent game studio · Türkiye</span></p>
+      <p><span class="footer-name">umigame</span><span class="footer-tag">{{ t.ui.footer_tag }}</span></p>
     </div>
     <nav aria-label="Footer">
       <ul class="footer-nav">
-        {%- for item in site.data.nav -%}
-          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {%- for item in t.nav -%}
+          <li><a href="{{ t.base | append: item.url | relative_url }}">{{ item.title }}</a></li>
         {%- endfor -%}
       </ul>
     </nav>
     <div class="footer-social">
-      <p class="eyebrow">Follow us</p>
+      <p class="eyebrow">{{ t.ui.follow }}</p>
       {% include socials.html %}
     </div>
   </div>
   <div class="container footer-legal">
-    <p>© {{ 'now' | date: "%Y" }} Umigame. All rights reserved.</p>
+    <p>© {{ 'now' | date: "%Y" }} Umigame. {{ t.ui.rights }}</p>
     <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   </div>
 </footer>

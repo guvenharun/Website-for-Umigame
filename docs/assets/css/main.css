@@ -11,6 +11,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Caveat Brush";
+  src: url("../fonts/CaveatBrush-wordmark.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --bg: #0b0b0d;
   --surface: #141418;
@@ -24,6 +31,7 @@
   /* pink variant:  --accent: #ff2d87;  --accent-hover: #ff5aa0;  */
 
   --font-display: "Swiss Condensed", "Arial Narrow", Impact, sans-serif;
+  --font-brand: "Caveat Brush", "Segoe Print", cursive; /* brush lettering, close to the logo's "umi" */
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   --gutter: 20px;
@@ -99,8 +107,15 @@ h1 em { font-style: normal; color: var(--accent); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img { height: 38px; width: auto; }
-.brand-name { font-family: var(--font-display); font-size: 1.6rem; letter-spacing: .08em; text-transform: uppercase; }
+.brand-name { font-family: var(--font-brand); font-size: 2rem; line-height: 1; letter-spacing: .01em; text-transform: none; padding-top: 4px; }
 
+.header-actions { display: flex; align-items: center; gap: 4px; margin-left: auto; }
+.lang-switch {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 36px; padding: 0 12px;
+  border: 1.5px solid var(--line); border-radius: 999px; text-decoration: none;
+  font-size: .8rem; font-weight: 700; letter-spacing: .1em; transition: border-color .2s, color .2s;
+}
+.lang-switch:hover { border-color: var(--accent); color: var(--accent-hover); }
 .nav-toggle {
   display: none; width: 48px; height: 48px; margin-right: -10px;
   background: none; border: 0; cursor: pointer; position: relative; color: var(--text);
@@ -179,9 +194,31 @@ h1 em { font-style: normal; color: var(--accent); }
 .card-body p { color: var(--muted); font-size: .95rem; margin-bottom: 1.2em; }
 .card-cta { margin-top: auto; color: var(--accent-hover); font-weight: 600; font-size: .9rem; }
 
+/* ---------- Feature cards (Home) ---------- */
+.feature-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+.feature-card { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: border-color .25s, transform .25s; }
+.feature-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.feature-media { display: block; aspect-ratio: 4 / 3; background: #000; overflow: hidden; }
+.feature-media img { width: 100%; height: 100%; object-fit: contain; }
+.feature-body { display: flex; flex-direction: column; flex: 1; padding: 24px 22px 26px; }
+.feature-body .tag { color: var(--accent); font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .5em; }
+.feature-body h3 { font-size: 1.8rem; margin-bottom: .35em; }
+.feature-body h3 a { text-decoration: none; }
+.feature-lead { color: var(--text); font-weight: 600; margin-bottom: .6em; }
+.feature-desc { color: var(--muted); font-size: .95rem; }
+.meta-title { margin: 1.2em 0 .5em; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.meta { margin: 0 0 1.4rem; border-top: 1px solid var(--line); }
+.meta > div { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
+.meta dt { color: var(--muted); }
+.meta dd { margin: 0; text-align: right; font-weight: 600; }
+.feature-body .card-cta { margin-top: auto; text-decoration: none; }
+
 /* ---------- Work page ---------- */
 .work-hero-grid { display: grid; gap: 28px; align-items: center; }
 .work-cover img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
+.work-body { display: grid; gap: 32px; }
+.work-info { align-self: start; padding: 4px 0; }
+.work-info .meta-title { margin-top: 0; }
 .back-link { display: inline-block; color: var(--muted); text-decoration: none; font-size: .9rem; margin-bottom: 1.2rem; }
 .back-link:hover { color: var(--text); }
 
@@ -216,8 +253,9 @@ h1 em { font-style: normal; color: var(--accent); }
 .footer-inner { display: grid; gap: 32px; }
 .footer-brand { display: flex; gap: 14px; align-items: center; }
 .footer-brand img { height: 47px; width: auto; }
-.footer-brand p { margin: 0; font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; letter-spacing: .08em; line-height: 1.2; }
-.footer-brand span { font-family: var(--font-body); font-size: .8rem; letter-spacing: 0; text-transform: none; color: var(--muted); }
+.footer-brand p { margin: 0; line-height: 1.25; }
+.footer-name { display: block; font-family: var(--font-brand); font-size: 2rem; line-height: 1; }
+.footer-tag { display: block; font-size: .8rem; color: var(--muted); margin-top: 4px; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
 .footer-nav a { text-decoration: none; color: var(--muted); display: inline-block; padding: 8px 0; }
 .footer-nav a:hover { color: var(--text); }
@@ -245,6 +283,7 @@ h1 em { font-style: normal; color: var(--accent); }
   :root { --gutter: 32px; --header-h: 72px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .split { grid-template-columns: 1fr 1.6fr; gap: 48px; }
+  .work-body { grid-template-columns: 1.6fr 1fr; gap: 56px; }
   .values { grid-template-columns: repeat(3, 1fr); }
   .contact-cards { grid-template-columns: 1fr 1fr; }
   .work-hero-grid { grid-template-columns: 1.1fr 1fr; gap: 48px; }
@@ -265,5 +304,10 @@ h1 em { font-style: normal; color: var(--accent); }
   .site-nav a::after { content: ""; position: absolute; left: 16px; right: 16px; bottom: 4px; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform .25s; }
   .site-nav a:hover::after, .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
   .grid { grid-template-columns: repeat(3, 1fr); }
+  .feature-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .feature-media { aspect-ratio: 4 / 3.2; }
+  .feature-body { padding: 28px 26px 30px; }
+  .site-nav { margin-left: auto; margin-right: 20px; }
+  .header-actions { margin-left: 0; }
   .featured-grid { grid-template-columns: 1fr 1.2fr; gap: 56px; }
 }

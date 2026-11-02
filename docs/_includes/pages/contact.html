@@ -1,0 +1,23 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+<section class="section">
+  <div class="container contact-cards">
+    <div class="contact-card">
+      <h2>{{ t.contact.collab_title }}</h2>
+      <p>{{ t.contact.collab_text }}</p>
+      <a class="mail-link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <div class="btn-row"><a class="btn btn-primary" href="mailto:{{ site.email }}?subject={{ t.contact.collab_subject | uri_escape }}">{{ t.contact.collab_btn }}</a></div>
+    </div>
+    <div class="contact-card">
+      <h2>{{ t.contact.community_title }}</h2>
+      <p>{{ t.contact.community_text }}</p>
+      <div class="btn-row"><a class="btn btn-ghost" href="https://discord.com/invite/PdMN8VnxVy" target="_blank" rel="noopener noreferrer">{{ t.contact.community_btn }}</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container split">
+    <div><h2>{{ t.contact.online_title }}</h2></div>
+    <div>{% include socials.html %}</div>
+  </div>
+</section>

@@ -1,22 +1,27 @@
+{%- assign t = site.data.i18n[page.lang] -%}
 <header class="site-header" id="site-header">
   <div class="container header-inner">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Umigame — home">
+    <a class="brand" href="{{ t.base | append: '/' | relative_url }}" aria-label="Umigame — {{ t.nav[0].title }}">
       <img src="{{ '/assets/img/logo-light.png' | relative_url }}" alt="" width="40" height="52">
-      <span class="brand-name">Umigame</span>
+      <span class="brand-name">umigame</span>
     </a>
-    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
-      <span class="sr-only">Menu</span>
-      <span class="nav-toggle-bar" aria-hidden="true"></span>
-    </button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul>
-        {%- for item in site.data.nav -%}
+        {%- for item in t.nav -%}
+          {%- assign href = t.base | append: item.url -%}
           {%- assign current = false -%}
-          {%- if item.url == "/" and page.url == "/" -%}{%- assign current = true -%}
-          {%- elsif item.url != "/" and page.url contains item.url -%}{%- assign current = true -%}{%- endif -%}
-          <li><a href="{{ item.url | relative_url }}"{% if current %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {%- if item.url == "/" and page.ref == "home" -%}{%- assign current = true -%}
+          {%- elsif item.url != "/" and page.url contains href -%}{%- assign current = true -%}{%- endif -%}
+          <li><a href="{{ href | relative_url }}"{% if current %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
         {%- endfor -%}
       </ul>
     </nav>
+    <div class="header-actions">
+      <a class="lang-switch" href="{{ alt_url | relative_url }}" hreflang="{{ t.switch.code }}" lang="{{ t.switch.code }}" aria-label="{{ t.switch.name }}" data-lang="{{ t.switch.code }}">{{ t.switch.label }}</a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">{{ t.ui.menu }}</span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
   </div>
 </header>

@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang }}" class="no-js">
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- comment -%} Find this page's counterpart in the other language (same ref, different lang). {%- endcomment -%}
+{%- assign alt_url = "" -%}
+{%- assign candidates = site.pages | concat: site.works | concat: site.works_tr -%}
+{%- for d in candidates -%}
+  {%- if d.ref == page.ref and d.lang != page.lang -%}{%- assign alt_url = d.url -%}{%- endif -%}
+{%- endfor -%}
+{%- if alt_url == "" -%}{%- assign alt_url = t.switch.code | prepend: "/" | append: "/" -%}{%- if t.switch.code == "en" -%}{%- assign alt_url = "/" -%}{%- endif -%}{%- endif -%}
+{%- assign pg = t.pages[page.ref] -%}
+{%- assign page_name = pg.title | default: page.title -%}
+{%- assign page_title = site.title -%}
+{%- if page_name and page.ref != "home" -%}{%- assign page_title = page_name | append: " · " | append: site.title -%}{%- endif -%}
+{%- assign page_desc = pg.description | default: page.tagline | default: page.description | default: t.site.description -%}
+<html lang="{{ t.html_lang }}" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  {%- assign page_title = site.title -%}
-  {%- if page.title and page.url != "/" -%}{%- assign page_title = page.title | append: " · " | append: site.title -%}{%- endif -%}
-  {%- assign page_desc = page.description | default: site.description -%}
   <title>{{ page_title }}</title>
   <meta name="description" content="{{ page_desc | strip_html | escape }}">
   <meta name="theme-color" content="#0b0b0d">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{{ t.switch.code }}" href="{{ alt_url | absolute_url }}">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="{% if page.lang == 'tr' %}tr_TR{% else %}en_US{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:description" content="{{ page_desc | strip_html | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:image" content="{{ page.image | default: '/assets/img/games/anomalistic-revolution.png' | absolute_url }}">
+  <meta property="og:image" content="{{ page.cover | default: '/assets/img/games/anomalistic-revolution.png' | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="{{ '/assets/img/favicon-32.png' | relative_url }}" sizes="32x32">
   <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
   <link rel="preload" href="{{ '/assets/fonts/Swiss721BT-BoldCondensed.ttf' | relative_url }}" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/CaveatBrush-wordmark.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">{{ t.ui.skip }}</a>
   {% include header.html %}
   <main id="main">
     {{ content }}

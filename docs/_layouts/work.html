@@ -1,15 +1,16 @@
 ---
 layout: default
 ---
+{%- assign t = site.data.i18n[page.lang] -%}
 <article>
   <section class="page-hero work-hero">
     <div class="container work-hero-grid">
       <div>
-        <a class="back-link" href="{{ '/works/' | relative_url }}"><span aria-hidden="true">←</span> All works</a>
+        <a class="back-link" href="{{ t.base | append: '/works/' | relative_url }}"><span aria-hidden="true">←</span> {{ t.ui.all_works }}</a>
         {% if page.genre %}<p class="eyebrow">{{ page.genre }}</p>{% endif %}
         <h1>{{ page.title }}</h1>
         <p class="lead">{{ page.tagline }}</p>
-        {% if page.links %}
+        {% if page.links and page.links.size > 0 %}
         <div class="btn-row">
           {% for l in page.links %}
             <a class="btn {% if forloop.first %}btn-primary{% else %}btn-ghost{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.label }}</a>
@@ -18,19 +19,23 @@ layout: default
         {% endif %}
       </div>
       <div class="work-cover">
-        <img src="{{ page.cover | relative_url }}" alt="{{ page.title }} cover art" width="{{ page.cover_w | default: 460 }}" height="{{ page.cover_h | default: 215 }}">
+        <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" width="{{ page.cover_w | default: 460 }}" height="{{ page.cover_h | default: 215 }}">
       </div>
     </div>
   </section>
   <section class="section">
-    <div class="container prose">
-      {{ content }}
+    <div class="container work-body">
+      <div class="prose">{{ content }}</div>
+      <aside class="work-info">
+        <p class="meta-title">{{ t.ui.game_info }}</p>
+        {% include work-meta.html work=page %}
+      </aside>
     </div>
   </section>
   {% if page.video %}
   <section class="section section-alt">
     <div class="container">
-      <h2>Trailer</h2>
+      <h2>{{ t.ui.trailer }}</h2>
       <div class="video-frame">
         <video controls preload="metadata" playsinline>
           <source src="{{ page.video | relative_url }}" type="video/mp4">

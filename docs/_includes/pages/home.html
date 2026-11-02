@@ -1,0 +1,72 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- if page.lang == "tr" -%}{%- assign works = site.works_tr | sort: "order" -%}{%- else -%}{%- assign works = site.works | sort: "order" -%}{%- endif -%}
+{%- assign featured = works | first -%}
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">{{ t.home.eyebrow }}</p>
+    <h1>{{ t.home.title_a }}<br>{{ t.home.title_b }} <em>{{ t.home.title_c }}</em></h1>
+    <p class="lead">{{ t.home.lead }}</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="{{ t.base | append: '/works/' | relative_url }}">{{ t.home.btn_works }}</a>
+      <a class="btn btn-ghost" href="{{ t.base | append: '/contact/' | relative_url }}">{{ t.home.btn_contact }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section featured">
+  <div class="container featured-grid">
+    <div class="featured-copy">
+      <p class="eyebrow">{{ t.home.featured }}</p>
+      <h2>{{ featured.title }}</h2>
+      <p class="lead">{{ featured.tagline }}</p>
+      <p>{{ featured.content | strip_html | strip | truncatewords: 40 }}</p>
+      <div class="btn-row">
+        {% for l in featured.links %}
+          <a class="btn {% if forloop.first %}btn-primary{% else %}btn-ghost{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.label }}</a>
+        {% endfor %}
+        <a class="btn btn-link" href="{{ featured.url | relative_url }}">{{ t.ui.learn_more }} <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="video-frame">
+      <video controls preload="metadata" playsinline aria-label="{{ featured.title }} — {{ t.ui.trailer }}">
+        <source src="{{ featured.video | relative_url }}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{{ t.home.works_eyebrow }}</p>
+        <h2>{{ t.home.works_title }}</h2>
+      </div>
+      <a class="btn btn-link" href="{{ t.base | append: '/works/' | relative_url }}">{{ t.ui.view_all }} <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="feature-grid">
+      {% for w in works limit: 3 %}{% include work-feature.html work=w %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">{{ t.home.about_eyebrow }}</p>
+      <h2>{{ t.home.about_title }}</h2>
+    </div>
+    <div>
+      <p>{{ t.home.about_text }}</p>
+      <a class="btn btn-link" href="{{ t.base | append: '/about/' | relative_url }}">{{ t.home.about_more }} <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <h2>{{ t.home.cta_title }}</h2>
+    <p>{{ t.home.cta_text }}</p>
+    <a class="btn btn-primary" href="{{ t.base | append: '/contact/' | relative_url }}">{{ t.home.cta_btn }}</a>
+  </div>
+</section>
