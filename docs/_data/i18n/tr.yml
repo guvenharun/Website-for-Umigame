@@ -42,8 +42,8 @@ pages:
   about:
     title: Hakkımızda
     eyebrow: Stüdyo
-    lead: 2024'te Türkiye'de bir kuluçka merkezinde kurulan Umigame, hikâye odaklı oyunlar geliştirmeye odaklanıyor.
-    description: Umigame, 2024'te Türkiye'de kurulan, hikâye odaklı oyunlara odaklanan beş kişilik bağımsız bir oyun stüdyosudur.
+    lead: "Psikolojik derinlik, özenle işlenmiş estetik görseller ve tekinsiz anlatılarla tanımlanan hikâye odaklı oyunlar üreten bağımsız bir stüdyoyuz."
+    description: "Psikolojik derinlik, özenle işlenmiş estetik görseller ve tekinsiz anlatılarla tanımlanan hikâye odaklı oyunlar üreten bağımsız bir stüdyoyuz."
   contact:
     title: İletişim
     eyebrow: Merhaba deyin
@@ -74,9 +74,8 @@ home:
   cta_text: Aklınızda bir fikir, proje ya da ortaklık mı var? Bizimle paylaşın.
   cta_btn: İletişime geçin
 about:
-  who_title: Biz kimiz
-  who_1: Stüdyomuz Umigame, 2024'te Türkiye'de bir kuluçka merkezinde kuruldu. Ekibimiz beş özverili üyeden oluşuyor.
-  who_2: Oyunculara benzersiz deneyimler sunan, keyifli oyunlar yapmayı amaçlıyoruz. Koleksiyonumuz, her biri özenle geliştirilmiş çeşitli türleri kapsıyor. Kendimizi geliştirmek ve yeni fikirleri keşfetmek için yoldayız; bu yolculukta desteğiniz için teşekkür ederiz.
+  approach_title: Yaklaşımımız
+  approach_text: "Jenerik dijital kusursuzluktan uzaklaşarak, oyunlarımızı ifade gücü yüksek sanat yönetiminin ve psikolojik gerilimin iç içe geçtiği dokunsal, içine çeken alanlar olarak ele alıyoruz. Ekran karardıktan çok sonra bile zihinde yankılanan interaktif deneyimler inşa etmek için çalışıyoruz."
   cta_title: Yaptıklarımıza göz atın
   cta_btn: Oyunlarımızı keşfedin
 contact:

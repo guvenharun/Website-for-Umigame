@@ -42,12 +42,12 @@ pages:
   about:
     title: About
     eyebrow: The studio
-    lead: Founded in 2024 at an incubation center in Türkiye, Umigame specialises in developing story-oriented games.
-    description: Umigame is a five-person independent game studio founded in 2024 in Türkiye, specialising in story-oriented games.
+    lead: "We are an independent studio crafting narrative-driven games defined by psychological depth, handcrafted aesthetics, and haunting storytelling."
+    description: "We are an independent studio crafting narrative-driven games defined by psychological depth, handcrafted aesthetics, and haunting storytelling."
   contact:
     title: Contact
     eyebrow: Say hello
-    lead: Questions, press or collaboration — we'd love to hear from you.
+    lead: Questions, press or collaboration. We'd love to hear from you.
     description: Contact Umigame for collaborations, press and general enquiries.
   notfound:
     title: Page not found
@@ -74,9 +74,8 @@ home:
   cta_text: Have an idea, a project or a partnership in mind? We'd love to hear it.
   cta_btn: Contact us
 about:
-  who_title: Who we are
-  who_1: Our studio, Umigame, was founded in 2024 at an incubation center in Türkiye. Our team consists of five dedicated members.
-  who_2: We aim to create enjoyable games that provide unique experiences for players. Our collection includes a variety of genres, each developed with care. We are on a journey to improve and explore new ideas, and we appreciate your support along the way.
+  approach_title: Our approach
+  approach_text: "Moving away from generic digital polish, we treat our games as tactile, immersive spaces where expressive art direction and psychological tension intertwine. We build interactive experiences that linger in the mind long after the screen goes dark."
   cta_title: See what we've made
   cta_btn: Explore our works
 contact:
