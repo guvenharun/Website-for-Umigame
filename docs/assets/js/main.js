@@ -21,7 +21,7 @@
           covered.forEach(function (el) { el.removeAttribute('inert'); });
         }, 750);
       };
-      setTimeout(finish, 4600);
+      setTimeout(finish, 3300);
       splash.addEventListener('click', finish);
       document.addEventListener('keydown', finish);
     }
