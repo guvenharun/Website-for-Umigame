@@ -1,6 +1,32 @@
 (function () {
   'use strict';
 
+  // ----- Intro screen (Home). The head script decides whether it plays (once per session). -----
+  var splash = document.getElementById('splash');
+  if (splash) {
+    var root = document.documentElement;
+    if (!root.classList.contains('splash-on')) {
+      splash.remove();
+    } else {
+      var covered = document.querySelectorAll('.site-header, main, .site-footer');
+      covered.forEach(function (el) { el.setAttribute('inert', ''); });
+      var finished = false;
+      var finish = function () {
+        if (finished) return;
+        finished = true;
+        splash.classList.add('is-leaving');
+        setTimeout(function () {
+          splash.remove();
+          root.classList.remove('splash-on');
+          covered.forEach(function (el) { el.removeAttribute('inert'); });
+        }, 750);
+      };
+      setTimeout(finish, 4600);
+      splash.addEventListener('click', finish);
+      document.addEventListener('keydown', finish);
+    }
+  }
+
   // ----- Mobile navigation -----
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');

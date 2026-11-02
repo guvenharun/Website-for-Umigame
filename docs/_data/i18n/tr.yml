@@ -47,6 +47,10 @@ pages:
     title: Sayfa bulunamadı
     eyebrow: "404"
     lead: Bu sayfa yok ya da taşınmış.
+splash:
+  tagline: Hikâye anlatan oyunlar yapıyoruz.
+  studios: Studios
+  skip: Girişi geç
 home:
   eyebrow: Bağımsız oyun stüdyosu · Türkiye
   title_a: Hikâye anlatan

@@ -36,8 +36,12 @@
   <link rel="preload" href="{{ '/assets/fonts/CaveatBrush-wordmark.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script>document.documentElement.className = 'js';</script>
+  {%- if page.ref == "home" %}
+  <script>(function(){try{var d=document.documentElement;if(!sessionStorage.getItem('umigame-splash')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('splash-on');sessionStorage.setItem('umigame-splash','1')}}catch(e){}})();</script>
+  {%- endif %}
 </head>
 <body>
+  {%- if page.ref == "home" %}{% include splash.html %}{% endif %}
   <a class="skip-link" href="#main">{{ t.ui.skip }}</a>
   {% include header.html %}
   <main id="main">

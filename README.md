@@ -25,6 +25,8 @@ docs/
 
 **Add a game:** copy a file in `docs/_works/` **and** the matching one in `docs/_works_tr/` (they must share the same `ref`). Change the front matter (`title`, `order`, `genre`, `tagline`, `cover`, `links`) and write the description below it. Optional "künye" fields: `developer`, `platforms`, `release`. Put the cover image in `docs/assets/img/games/`. The Works and Home pages update automatically.
 
+**Intro screen (Home):** markup in `docs/_includes/splash.html`, styles under "Intro / splash" in `main.css`, logic at the top of `assets/js/main.js`. It plays once per browser session, is skipped for visitors who prefer reduced motion, and shows the game covers from `_works/` as the moving background. Slogan and button text live in `_data/i18n/*.yml` under `splash`.
+
 **Change site text or translations:** edit `docs/_data/i18n/en.yml` and `tr.yml`. The language button in the header links each page to its counterpart through the shared `ref`.
 
 **Change a social link:** edit `docs/_data/socials.yml`.
