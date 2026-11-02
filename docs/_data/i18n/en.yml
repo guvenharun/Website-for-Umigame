@@ -58,8 +58,8 @@ splash:
   skip: Skip intro
 home:
   eyebrow: Independent game studio · Türkiye
-  title_a: Indie games shaped by psychological depth, handcrafted visuals, and
-  title_b: haunting narratives.
+  title_a: Indie Games Shaped By Psychological Depth, Handcrafted Visuals, And
+  title_b: Haunting Narratives.
   lead: Umigame is a small team building story-oriented games with strange worlds, hard choices and characters worth remembering.
   btn_works: Explore our works
   btn_contact: Get in touch
@@ -77,9 +77,6 @@ about:
   who_title: Who we are
   who_1: Our studio, Umigame, was founded in 2024 at an incubation center in Türkiye. Our team consists of five dedicated members.
   who_2: We aim to create enjoyable games that provide unique experiences for players. Our collection includes a variety of genres, each developed with care. We are on a journey to improve and explore new ideas, and we appreciate your support along the way.
-  stat_founded: Founded
-  stat_team: Team members
-  stat_games: Games
   cta_title: See what we've made
   cta_btn: Explore our works
 contact:

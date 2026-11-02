@@ -106,7 +106,7 @@ h1 em { font-style: normal; color: var(--accent); }
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand img { height: 38px; width: auto; }
+.brand img { height: 40px; width: auto; }
 .brand-name { font-family: var(--font-brand); font-size: 2rem; line-height: 1; letter-spacing: .01em; text-transform: none; padding-top: 4px; }
 
 .header-actions { display: flex; align-items: center; gap: 4px; margin-left: auto; }
@@ -164,7 +164,7 @@ h1 em { font-style: normal; color: var(--accent); }
     linear-gradient(to bottom, var(--bg), transparent 18%, transparent 80%, var(--bg));
 }
 .hero-inner { position: relative; z-index: 2; }
-.hero h1 { max-width: 26ch; font-size: clamp(2rem, 5.3vw, 3.9rem); line-height: 1.06; text-wrap: balance; } /* long slogan: smaller than the page-title size */
+.hero h1 { text-transform: none; /* Title Case is written in the text itself (browsers get Turkish İ wrong) */ max-width: 26ch; font-size: clamp(2rem, 5.3vw, 3.9rem); line-height: 1.06; text-wrap: balance; } /* long slogan: smaller than the page-title size */
 .hero .lead { font-size: 1.2rem; }
 
 .page-hero {
@@ -239,10 +239,7 @@ html.lightbox-open { overflow: hidden; }
 .contact-card h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
 .contact-card p { color: var(--muted); }
 
-/* ---------- Stats / CTA ---------- */
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: center; }
-.stat { display: block; font-family: var(--font-display); font-size: clamp(2.2rem, 9vw, 4.5rem); color: var(--accent); line-height: 1; }
-.stat-label { color: var(--muted); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+/* ---------- CTA ---------- */
 .cta { padding: clamp(56px, 10vw, 110px) 0; text-align: center; background: radial-gradient(ellipse 60% 100% at 50% 100%, rgba(225, 29, 46, .25), transparent 70%), var(--bg); }
 .cta-inner p { color: var(--muted); max-width: 32rem; margin-inline: auto; }
 .cta .btn { margin-top: 1rem; }
@@ -264,7 +261,7 @@ html.lightbox-open { overflow: hidden; }
 .footer-block p { margin: 0 0 .3em; color: var(--muted); font-size: .9rem; line-height: 1.55; }
 .footer-block a { display: inline-block; padding: 8px 0; color: var(--accent-hover); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
 .footer-block a:hover { text-decoration: underline; }
-.footer-brand img { height: 47px; width: auto; }
+.footer-brand img { height: 46px; width: auto; }
 .footer-brand p { margin: 0; line-height: 1.25; }
 .footer-name { display: block; font-family: var(--font-brand); font-size: 2rem; line-height: 1; }
 .footer-tag { display: block; font-size: .8rem; color: var(--muted); margin-top: 4px; }

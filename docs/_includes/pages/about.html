@@ -1,5 +1,4 @@
 {%- assign t = site.data.i18n[page.lang] -%}
-{%- if page.lang == "tr" -%}{%- assign count = site.works_tr.size -%}{%- else -%}{%- assign count = site.works.size -%}{%- endif -%}
 <section class="section">
   <div class="container split">
     <div><h2>{{ t.about.who_title }}</h2></div>
@@ -7,14 +6,6 @@
       <p>{{ t.about.who_1 }}</p>
       <p>{{ t.about.who_2 }}</p>
     </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container stats">
-    <div><span class="stat">2024</span><span class="stat-label">{{ t.about.stat_founded }}</span></div>
-    <div><span class="stat">5</span><span class="stat-label">{{ t.about.stat_team }}</span></div>
-    <div><span class="stat">{{ count }}</span><span class="stat-label">{{ t.about.stat_games }}</span></div>
   </div>
 </section>
 
