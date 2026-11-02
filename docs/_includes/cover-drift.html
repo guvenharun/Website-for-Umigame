@@ -1,0 +1,10 @@
+{%- comment -%} Two rows of game covers drifting in opposite directions. Usage: include cover-drift.html class="splash-bg" {%- endcomment -%}
+{%- if page.lang == "tr" -%}{%- assign covers = site.works_tr | sort: "order" -%}{%- else -%}{%- assign covers = site.works | sort: "order" -%}{%- endif -%}
+<div class="{{ include.class }}" aria-hidden="true">
+  <div class="drift-row">
+    {%- for round in (1..2) -%}{%- for c in covers -%}<img src="{{ c.cover | replace: '.jpg', '-bg.jpg' | relative_url }}" alt="" width="640" height="360" decoding="async">{%- endfor -%}{%- endfor -%}
+  </div>
+  <div class="drift-row drift-row-rev">
+    {%- for round in (1..2) -%}{%- for c in covers reversed -%}<img src="{{ c.cover | replace: '.jpg', '-bg.jpg' | relative_url }}" alt="" width="640" height="360" decoding="async">{%- endfor -%}{%- endfor -%}
+  </div>
+</div>
