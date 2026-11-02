@@ -176,24 +176,6 @@ h1 em { font-style: normal; color: var(--accent); }
 .video-frame { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #000; aspect-ratio: 16 / 9; }
 .video-frame video { width: 100%; height: 100%; object-fit: cover; }
 
-/* ---------- Cards ---------- */
-.grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
-.card {
-  display: flex; flex-direction: column; text-decoration: none;
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
-  transition: transform .25s, border-color .25s;
-}
-.section-alt .card { background: var(--bg); }
-.card:hover { transform: translateY(-4px); border-color: var(--accent); }
-.card-media { aspect-ratio: 16 / 9; overflow: hidden; background: var(--surface-2); }
-.card-media img { width: 100%; height: 100%; object-fit: contain; transition: transform .4s; } /* contain: never crop the cover art / titles */
-.card:hover .card-media img { transform: scale(1.03); }
-.card-body { padding: 20px 20px 22px; display: flex; flex-direction: column; flex: 1; }
-.card-body .tag { color: var(--accent); font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .5em; }
-.card-body h3 { margin-bottom: .4em; }
-.card-body p { color: var(--muted); font-size: .95rem; margin-bottom: 1.2em; }
-.card-cta { margin-top: auto; color: var(--accent-hover); font-weight: 600; font-size: .9rem; }
-
 /* ---------- Feature cards (Home) ---------- */
 .feature-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
 .feature-card { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: border-color .25s, transform .25s; }
@@ -211,7 +193,8 @@ h1 em { font-style: normal; color: var(--accent); }
 .meta > div { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
 .meta dt { color: var(--muted); }
 .meta dd { margin: 0; text-align: right; font-weight: 600; }
-.feature-body .card-cta { margin-top: auto; text-decoration: none; }
+.feature-body .card-cta { margin-top: auto; text-decoration: none; color: var(--accent-hover); font-weight: 600; font-size: .9rem; }
+.feature-body .card-cta:hover { text-decoration: underline; }
 
 /* ---------- Work page ---------- */
 .work-hero-grid { display: grid; gap: 28px; align-items: center; }
@@ -282,7 +265,6 @@ h1 em { font-style: normal; color: var(--accent); }
    ========================================================================== */
 @media (min-width: 700px) {
   :root { --gutter: 32px; --header-h: 72px; }
-  .grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
   .split { grid-template-columns: 1fr 1.6fr; gap: 48px; }
   .work-body { grid-template-columns: 1.6fr 1fr; gap: 56px; }
@@ -305,7 +287,6 @@ h1 em { font-style: normal; color: var(--accent); }
   }
   .site-nav a::after { content: ""; position: absolute; left: 16px; right: 16px; bottom: 4px; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform .25s; }
   .site-nav a:hover::after, .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
-  .grid { grid-template-columns: repeat(3, 1fr); }
   .feature-body { padding: 28px 26px 30px; }
   .site-nav { margin-left: auto; margin-right: 20px; }
   .header-actions { margin-left: 0; }
