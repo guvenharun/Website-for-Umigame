@@ -24,6 +24,13 @@ ui:
   footer_tag: Bağımsız oyun stüdyosu · Türkiye
   rights: Tüm hakları saklıdır.
   not_found_back: Ana sayfaya dön
+  gallery: Galeri
+  screenshot: Ekran görüntüsü
+  close: Kapat
+  prev: Önceki
+  next: Sonraki
+  hosted_at: ODTÜ Teknokent ATOM bünyesinde çalışıyoruz.
+  address: ""   # açık adres dolduğunda footer'da görünür
 site:
   description: Umigame, Türkiye'den hikâye odaklı oyunlar geliştiren bağımsız bir oyun stüdyosudur. Anomalistic Revolution bu oyunlardan biridir.
 pages:
@@ -48,7 +55,6 @@ pages:
     eyebrow: "404"
     lead: Bu sayfa yok ya da taşınmış.
 splash:
-  tagline: Hikâye anlatan oyunlar yapıyoruz.
   studios: Studios
   skip: Girişi geç
 home:
@@ -66,19 +72,19 @@ home:
   about_title: 2024'te kuruldu, anlatı üzerine kurulu
   about_text: Umigame, Türkiye'de bir kuluçka merkezinde kuruldu. Hikâye odaklı oyunlar geliştiriyoruz; ekibimiz beş özverili üyeden oluşuyor.
   about_more: Bizi daha yakından tanıyın
-  cta_title: Bizimle çalışmak ister misiniz?
-  cta_text: Özgeçmişinizi ve portfolyonuzu gönderin, birlikte neler yapmak istediğinizi anlatın.
+  cta_title: İş birliğine açığız
+  cta_text: Aklınızda bir fikir, proje ya da ortaklık mı var? Bizimle paylaşın.
   cta_btn: İletişime geçin
 about:
   who_title: Biz kimiz
   who_1: Stüdyomuz Umigame, 2024'te Türkiye'de bir kuluçka merkezinde kuruldu. Ekibimiz beş özverili üyeden oluşuyor.
   who_2: Oyunculara benzersiz deneyimler sunan, keyifli oyunlar yapmayı amaçlıyoruz. Koleksiyonumuz, her biri özenle geliştirilmiş çeşitli türleri kapsıyor. Kendimizi geliştirmek ve yeni fikirleri keşfetmek için yoldayız; bu yolculukta desteğiniz için teşekkür ederiz.
-  what_eyebrow: Ne yapıyoruz
-  what_title: Oyunları nasıl yapıyoruz
+  what_eyebrow: Faaliyet alanımız
+  what_title: Hikâye odaklı oyun geliştirme
   values:
-    - { title: Önce hikâye, text: "Seçimlerin ve karakterlerin deneyimi yönlendirdiği, hikâye odaklı oyunlar geliştiriyoruz." }
-    - { title: Birçok tür, text: "RPG maceralarından görsel romanlara, psikolojik korkudan hayatta kalma ve yönetim oyunlarına kadar." }
-    - { title: Özenle yapılır, text: "Her oyun özenle geliştiriliyor; kendimizi geliştirmeye ve yeni fikirleri keşfetmeye devam ediyoruz." }
+    - { title: Anlatı odaklı tasarım, text: "Seçimlerin, karakterlerin ve atmosferin oyuncu deneyimini şekillendirdiği, hikâye odaklı oyunlar geliştirmeye odaklanıyoruz." }
+    - { title: Tür çeşitliliği, text: "RPG maceralarından görsel romanlara, psikolojik korkudan hayatta kalma ve yönetim simülasyonlarına kadar her projeyi hikâyesine en uygun biçimde ele alıyoruz." }
+    - { title: Küresel bir kitle için, text: "Oyunlarımız, yapım başına 6 ile 15 arasında değişen dil desteğiyle yayımlanıyor." }
   stat_founded: Kuruluş
   stat_team: Ekip üyesi
   stat_games: Oyun
@@ -86,7 +92,7 @@ about:
   cta_btn: Oyunlarımızı keşfedin
 contact:
   collab_title: İş birlikleri
-  collab_text: "İş birliği yapmak istiyorsanız, lütfen özgeçmişinizi ve portfolyonuzu şu adrese gönderin:"
+  collab_text: "Bizimle iş birliği yapmak istiyorsanız şu adrese yazabilirsiniz:"
   collab_btn: E-posta gönder
   collab_subject: İş birliği
   community_title: Topluluğa katılın

@@ -14,10 +14,6 @@
     <img class="splash-logo" src="{{ '/assets/img/logo-mark-light.png' | relative_url }}" alt="" width="270" height="380">
     <p class="splash-name">umigame</p>
     <p class="splash-studios" lang="en">{{ t.splash.studios }}</p>
-    <p class="splash-tagline" aria-label="{{ t.splash.tagline }}">
-      {%- assign words = t.splash.tagline | split: " " -%}
-      {%- for w in words -%}<span class="w{% if forloop.last %} w-accent{% endif %}" style="--i:{{ forloop.index0 }}" aria-hidden="true">{{ w }}</span> {% endfor -%}
-    </p>
   </div>
   <button type="button" class="splash-skip">{{ t.splash.skip }}</button>
   <div class="splash-progress" aria-hidden="true"></div>

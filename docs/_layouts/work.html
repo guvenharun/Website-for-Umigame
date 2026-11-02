@@ -32,8 +32,24 @@ layout: default
       </aside>
     </div>
   </section>
-  {% if page.video %}
+  {% if page.screens %}
   <section class="section section-alt">
+    <div class="container">
+      <h2>{{ t.ui.gallery }}</h2>
+      <ul class="gallery" data-close="{{ t.ui.close }}" data-prev="{{ t.ui.prev }}" data-next="{{ t.ui.next }}">
+        {%- for i in (1..page.screens) -%}
+        <li>
+          <a class="gallery-item" href="{{ '/assets/img/games/' | append: page.ref | append: '/shot-' | append: i | append: '.jpg' | relative_url }}" aria-label="{{ t.ui.screenshot }} {{ i }}">
+            <img src="{{ '/assets/img/games/' | append: page.ref | append: '/thumb-' | append: i | append: '.jpg' | relative_url }}" alt="{{ page.title }} — {{ t.ui.screenshot }} {{ i }}" loading="lazy" width="640" height="360">
+          </a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+  {% endif %}
+  {% if page.video %}
+  <section class="section">
     <div class="container">
       <h2>{{ t.ui.trailer }}</h2>
       <div class="video-frame">

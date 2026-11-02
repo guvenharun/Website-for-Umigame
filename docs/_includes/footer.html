@@ -1,9 +1,16 @@
 {%- assign t = site.data.i18n[page.lang] -%}
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div class="footer-brand">
-      <img src="{{ '/assets/img/logo-light.png' | relative_url }}" alt="" width="36" height="47">
-      <p><span class="footer-name">umigame</span><span class="footer-tag">{{ t.ui.footer_tag }}</span></p>
+    <div class="footer-about">
+      <div class="footer-brand">
+        <img src="{{ '/assets/img/logo-light.png' | relative_url }}" alt="" width="36" height="47">
+        <p><span class="footer-name">umigame</span><span class="footer-tag">{{ t.ui.footer_tag }}</span></p>
+      </div>
+      <div class="footer-block">
+        <p>{{ t.ui.hosted_at }}</p>
+        {%- if t.ui.address and t.ui.address != "" %}<p>{{ t.ui.address }}</p>{% endif %}
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
     </div>
     <nav aria-label="Footer">
       <ul class="footer-nav">
@@ -19,6 +26,5 @@
   </div>
   <div class="container footer-legal">
     <p>© {{ 'now' | date: "%Y" }} Umigame. {{ t.ui.rights }}</p>
-    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   </div>
 </footer>

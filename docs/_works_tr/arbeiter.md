@@ -12,6 +12,7 @@ platforms: "Windows"
 release: "Duyurulacak"
 links:
   - { label: "Steam'de istek listesine ekle", url: "https://store.steampowered.com/app/3884080/Arbeiter/" }
+screens: 6
 # Optional künye fields: developer, platforms, release
 ---
 Arbeiter, sizi düşük gelirli bir işçinin yerine koyan bir hayatta kalma ve yönetim oyunudur. Gündelik zorluklarla ve iş yeri mücadeleleriyle yüzleşin, ayakta kalmanın yollarını bulun. Tükenin, işten atılın, işi bırakıp çıkın, ortak zaferler kazanın ya da kendi bağımsız yolunuzu çizin.
