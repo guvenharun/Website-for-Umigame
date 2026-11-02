@@ -25,7 +25,7 @@ layout: default
   </section>
   <section class="section">
     <div class="container work-body">
-      <div class="prose">{{ content }}</div>
+      <div class="prose">{{ content }}{% if page.note %}<p class="note">{{ page.note }}</p>{% endif %}</div>
       <aside class="work-info">
         <p class="meta-title">{{ t.ui.game_info }}</p>
         {% include work-meta.html work=page %}

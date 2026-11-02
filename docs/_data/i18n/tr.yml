@@ -73,7 +73,7 @@ about:
   what_title: Oyunları nasıl yapıyoruz
   values:
     - { title: Önce hikâye, text: "Seçimlerin ve karakterlerin deneyimi yönlendirdiği, hikâye odaklı oyunlar geliştiriyoruz." }
-    - { title: Birçok tür, text: "RPG maceralarından görsel romanlara, hayatta kalma-yönetim ve aksiyon-macera oyunlarına kadar." }
+    - { title: Birçok tür, text: "RPG maceralarından görsel romanlara, psikolojik korkudan hayatta kalma ve yönetim oyunlarına kadar." }
     - { title: Özenle yapılır, text: "Her oyun özenle geliştiriliyor; kendimizi geliştirmeye ve yeni fikirleri keşfetmeye devam ediyoruz." }
   stat_founded: Kuruluş
   stat_team: Ekip üyesi

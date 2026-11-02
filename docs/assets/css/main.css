@@ -216,6 +216,7 @@ h1 em { font-style: normal; color: var(--accent); }
 /* ---------- Work page ---------- */
 .work-hero-grid { display: grid; gap: 28px; align-items: center; }
 .work-cover img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
+.note { margin-top: 1.5rem; padding: 14px 18px; border-left: 3px solid var(--accent); background: var(--surface); color: var(--muted); font-size: .92rem; border-radius: 0 var(--radius) var(--radius) 0; }
 .work-body { display: grid; gap: 32px; }
 .work-info { align-self: start; padding: 4px 0; }
 .work-info .meta-title { margin-top: 0; }
