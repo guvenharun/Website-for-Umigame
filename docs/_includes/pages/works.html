@@ -1,0 +1,9 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- if page.lang == "tr" -%}{%- assign works = site.works_tr | sort: "order" -%}{%- else -%}{%- assign works = site.works | sort: "order" -%}{%- endif -%}
+<section class="section">
+  <div class="container">
+    <div class="feature-grid">
+      {% for w in works %}{% include work-feature.html work=w %}{% endfor %}
+    </div>
+  </div>
+</section>

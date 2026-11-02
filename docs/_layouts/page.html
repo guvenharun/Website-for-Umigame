@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign pg = t.pages[page.ref] -%}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ pg.eyebrow }}</p>
+    <h1>{{ pg.title }}</h1>
+    {% if pg.lead %}<p class="lead">{{ pg.lead }}</p>{% endif %}
+  </div>
+</section>
+{{ content }}
