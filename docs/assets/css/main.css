@@ -185,7 +185,7 @@ h1 em { font-style: normal; color: var(--accent); }
 }
 .section-alt .card { background: var(--bg); }
 .card:hover { transform: translateY(-4px); border-color: var(--accent); }
-.card-media { aspect-ratio: 16 / 10; overflow: hidden; background: var(--surface-2); }
+.card-media { aspect-ratio: 16 / 9; overflow: hidden; background: var(--surface-2); }
 .card-media img { width: 100%; height: 100%; object-fit: contain; transition: transform .4s; } /* contain: never crop the cover art / titles */
 .card:hover .card-media img { transform: scale(1.03); }
 .card-body { padding: 20px 20px 22px; display: flex; flex-direction: column; flex: 1; }
@@ -198,7 +198,7 @@ h1 em { font-style: normal; color: var(--accent); }
 .feature-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
 .feature-card { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: border-color .25s, transform .25s; }
 .feature-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-.feature-media { display: block; aspect-ratio: 4 / 3; background: #000; overflow: hidden; }
+.feature-media { display: block; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
 .feature-media img { width: 100%; height: 100%; object-fit: contain; }
 .feature-body { display: flex; flex-direction: column; flex: 1; padding: 24px 22px 26px; }
 .feature-body .tag { color: var(--accent); font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .5em; }
@@ -305,7 +305,6 @@ h1 em { font-style: normal; color: var(--accent); }
   .site-nav a:hover::after, .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
   .grid { grid-template-columns: repeat(3, 1fr); }
   .feature-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
-  .feature-media { aspect-ratio: 4 / 3.2; }
   .feature-body { padding: 28px 26px 30px; }
   .site-nav { margin-left: auto; margin-right: 20px; }
   .header-actions { margin-left: 0; }

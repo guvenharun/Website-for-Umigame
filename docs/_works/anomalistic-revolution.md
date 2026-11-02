@@ -5,9 +5,9 @@ title: "Anomalistic Revolution"
 order: 1
 genre: "RPG · Runner"
 tagline: "Anime-styled RPG adventure with runner mechanics."
-cover: /assets/img/games/anomalistic-revolution.png
-cover_w: 315
-cover_h: 250
+cover: /assets/img/games/anomalistic-revolution.jpg
+cover_w: 1280
+cover_h: 720
 platforms: "Steam · itch.io"
 video: /assets/video/anomalistic-revolution-trailer.mp4
 links:
