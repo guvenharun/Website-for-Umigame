@@ -6,6 +6,7 @@ layout: default
     <div class="container work-hero-grid">
       <div>
         <a class="back-link" href="{{ '/works/' | relative_url }}"><span aria-hidden="true">←</span> All works</a>
+        {% if page.genre %}<p class="eyebrow">{{ page.genre }}</p>{% endif %}
         <h1>{{ page.title }}</h1>
         <p class="lead">{{ page.tagline }}</p>
         {% if page.links %}

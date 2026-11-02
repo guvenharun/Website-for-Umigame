@@ -1,6 +1,7 @@
 ---
 title: "Dissolution of the Silent Union"
 order: 2
+genre: "Visual Novel"
 tagline: "A short, narrative-driven visual novel."
 cover: /assets/img/games/dissolution-of-the-silent-union.jpeg
 cover_w: 920

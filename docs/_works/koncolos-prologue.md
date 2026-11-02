@@ -1,6 +1,7 @@
 ---
 title: "Koncolos Prologue"
 order: 5
+genre: "Visual Novel"
 tagline: "A visual novel of redemption and remorse."
 cover: /assets/img/games/koncolos-prologue.png
 cover_w: 315

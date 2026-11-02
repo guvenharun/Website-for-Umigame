@@ -1,6 +1,7 @@
 ---
 title: "Anomalistic Revolution"
 order: 1
+genre: "RPG · Runner"
 tagline: "Anime-styled RPG adventure with runner mechanics."
 cover: /assets/img/games/anomalistic-revolution.png
 cover_w: 315

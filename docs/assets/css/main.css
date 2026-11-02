@@ -154,7 +154,7 @@ h1 em { font-style: normal; color: var(--accent); }
 .split { display: grid; gap: 16px; }
 .prose { max-width: 42rem; color: #d6d1d9; }
 .prose h2 { color: var(--text); }
-.mail-link { font-family: var(--font-display); font-size: clamp(1.4rem, 5vw, 2.2rem); color: var(--accent-hover); text-decoration: none; word-break: break-all; }
+.mail-link { font-family: var(--font-display); font-size: clamp(1.15rem, 4.2vw, 1.7rem); color: var(--accent-hover); text-decoration: none; overflow-wrap: anywhere; display: inline-block; }
 .mail-link:hover { text-decoration: underline; }
 
 .featured-grid { display: grid; gap: 32px; align-items: center; }
@@ -171,9 +171,10 @@ h1 em { font-style: normal; color: var(--accent); }
 .section-alt .card { background: var(--bg); }
 .card:hover { transform: translateY(-4px); border-color: var(--accent); }
 .card-media { aspect-ratio: 16 / 10; overflow: hidden; background: var(--surface-2); }
-.card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
-.card:hover .card-media img { transform: scale(1.04); }
+.card-media img { width: 100%; height: 100%; object-fit: contain; transition: transform .4s; } /* contain: never crop the cover art / titles */
+.card:hover .card-media img { transform: scale(1.03); }
 .card-body { padding: 20px 20px 22px; display: flex; flex-direction: column; flex: 1; }
+.card-body .tag { color: var(--accent); font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 .5em; }
 .card-body h3 { margin-bottom: .4em; }
 .card-body p { color: var(--muted); font-size: .95rem; margin-bottom: 1.2em; }
 .card-cta { margin-top: auto; color: var(--accent-hover); font-weight: 600; font-size: .9rem; }
@@ -183,6 +184,16 @@ h1 em { font-style: normal; color: var(--accent); }
 .work-cover img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
 .back-link { display: inline-block; color: var(--muted); text-decoration: none; font-size: .9rem; margin-bottom: 1.2rem; }
 .back-link:hover { color: var(--text); }
+
+/* ---------- Values / contact cards ---------- */
+.values { display: grid; gap: 16px; }
+.value { padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+.value h3 { color: var(--text); margin-bottom: .4em; }
+.value p { color: var(--muted); margin: 0; }
+.contact-cards { display: grid; gap: 16px; }
+.contact-card { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.contact-card h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+.contact-card p { color: var(--muted); }
 
 /* ---------- Stats / CTA ---------- */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: center; }
@@ -234,8 +245,10 @@ h1 em { font-style: normal; color: var(--accent); }
   :root { --gutter: 32px; --header-h: 72px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .split { grid-template-columns: 1fr 1.6fr; gap: 48px; }
+  .values { grid-template-columns: repeat(3, 1fr); }
+  .contact-cards { grid-template-columns: 1fr 1fr; }
   .work-hero-grid { grid-template-columns: 1.1fr 1fr; gap: 48px; }
-  .footer-inner { grid-template-columns: 1.2fr 1fr 1.4fr; align-items: start; }
+  .footer-inner { grid-template-columns: 1.2fr auto 1.4fr; gap: 40px; align-items: start; }
   .footer-social .eyebrow { margin-bottom: .8em; }
 }
 

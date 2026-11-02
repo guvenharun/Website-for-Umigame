@@ -1,6 +1,7 @@
 ---
 title: "Arbeiter"
 order: 3
+genre: "Survival · Management"
 tagline: "A survival-management game about getting through the workday."
 cover: /assets/img/games/arbeiter.jpg
 cover_w: 1280
