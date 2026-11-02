@@ -1,0 +1,15 @@
+# Social links shown in the footer and on the Contact page.
+# Add or reorder entries here and the whole site updates.
+- name: X
+  url: https://x.com/UmigameStudios
+- name: TikTok
+  url: https://www.tiktok.com/@anomalisticrevolution
+- name: Discord
+  url: https://discord.com/invite/PdMN8VnxVy
+- name: Steam
+  url: https://store.steampowered.com/developer/umigame
+- name: itch.io
+  url: https://umigamestudios.itch.io/
+# TODO: Instagram — the old link pointed to instagram.com (not a real account).
+# - name: Instagram
+#   url: https://www.instagram.com/<handle>/

@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="{{ '/assets/img/logo-light.png' | relative_url }}" alt="" width="36" height="47">
+      <p>Umigame<br><span>Independent game studio · Türkiye</span></p>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="footer-nav">
+        {%- for item in site.data.nav -%}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+    <div class="footer-social">
+      <p class="eyebrow">Follow us</p>
+      {% include socials.html %}
+    </div>
+  </div>
+  <div class="container footer-legal">
+    <p>© {{ 'now' | date: "%Y" }} Umigame. All rights reserved.</p>
+    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </div>
+</footer>

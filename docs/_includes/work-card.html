@@ -1,0 +1,9 @@
+{%- assign w = include.work -%}
+<a class="card" href="{{ w.url | relative_url }}">
+  <div class="card-media"><img src="{{ w.cover | relative_url }}" alt="{{ w.title }} cover art" loading="lazy" width="{{ w.cover_w | default: 460 }}" height="{{ w.cover_h | default: 215 }}"></div>
+  <div class="card-body">
+    <h3>{{ w.title }}</h3>
+    <p>{{ w.tagline }}</p>
+    <span class="card-cta">View game <span aria-hidden="true">→</span></span>
+  </div>
+</a>

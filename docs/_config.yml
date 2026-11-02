@@ -1,0 +1,25 @@
+title: Umigame
+tagline: Story-driven games
+description: Umigame is an independent game studio from Türkiye making story-driven games, including Anomalistic Revolution.
+url: "https://umigamestudios.com"
+baseurl: ""
+lang: en
+email: umigamestudios@gmail.com
+
+collections:
+  works:
+    output: true
+    permalink: /works/:name/
+
+defaults:
+  - scope: { path: "", type: "works" }
+    values: { layout: "work" }
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

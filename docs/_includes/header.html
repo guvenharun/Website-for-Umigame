@@ -1,0 +1,22 @@
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Umigame — home">
+      <img src="{{ '/assets/img/logo-light.png' | relative_url }}" alt="" width="40" height="52">
+      <span class="brand-name">Umigame</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        {%- for item in site.data.nav -%}
+          {%- assign current = false -%}
+          {%- if item.url == "/" and page.url == "/" -%}{%- assign current = true -%}
+          {%- elsif item.url != "/" and page.url contains item.url -%}{%- assign current = true -%}{%- endif -%}
+          <li><a href="{{ item.url | relative_url }}"{% if current %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</header>

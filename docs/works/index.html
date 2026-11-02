@@ -1,0 +1,15 @@
+---
+layout: page
+title: Works
+eyebrow: Games
+lead: At Umigame we aim to create enjoyable games that provide unique experiences for players. Each one is developed with care, across a variety of genres.
+description: Every game made by Umigame, from Anomalistic Revolution to our visual novels and puzzle adventures.
+---
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      {% assign works = site.works | sort: "order" %}
+      {% for w in works %}{% include work-card.html work=w %}{% endfor %}
+    </div>
+  </div>
+</section>
