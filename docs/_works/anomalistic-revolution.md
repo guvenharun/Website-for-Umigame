@@ -8,10 +8,11 @@ tagline: "Anime-styled RPG adventure with runner mechanics."
 cover: /assets/img/games/anomalistic-revolution.jpg
 cover_w: 1280
 cover_h: 720
-platforms: "Steam · itch.io"
 video: /assets/video/anomalistic-revolution-trailer.mp4
+platforms: "Windows"
+release: "Q4 2026"
 links:
-  - { label: "View on Steam", url: "https://store.steampowered.com/app/2168120/Anomalistic_Revolution/" }
+  - { label: "Wishlist on Steam", url: "https://store.steampowered.com/app/2168120/Anomalistic_Revolution/" }
   - { label: "Play on itch.io", url: "https://umigamestudios.itch.io/anomalistic-revolution" }
 # Optional künye fields: developer, platforms, release
 ---

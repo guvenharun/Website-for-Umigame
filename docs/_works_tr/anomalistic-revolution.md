@@ -8,10 +8,11 @@ tagline: "Anime tarzında, koşu mekanikli RPG macerası."
 cover: /assets/img/games/anomalistic-revolution.jpg
 cover_w: 1280
 cover_h: 720
-platforms: "Steam · itch.io"
 video: /assets/video/anomalistic-revolution-trailer.mp4
+platforms: "Windows"
+release: "2026 4. Çeyrek"
 links:
-  - { label: "Steam'de görüntüle", url: "https://store.steampowered.com/app/2168120/Anomalistic_Revolution/" }
+  - { label: "Steam'de istek listesine ekle", url: "https://store.steampowered.com/app/2168120/Anomalistic_Revolution/" }
   - { label: "itch.io'da oyna", url: "https://umigamestudios.itch.io/anomalistic-revolution" }
 # Optional künye fields: developer, platforms, release
 ---
