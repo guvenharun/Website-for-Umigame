@@ -171,6 +171,7 @@ h1 em { font-style: normal; color: var(--accent); }
   padding: clamp(48px, 10vw, 110px) 0 clamp(24px, 5vw, 50px);
   background: radial-gradient(ellipse 70% 100% at 90% 0%, rgba(225, 29, 46, .18), transparent 65%), var(--bg);
 }
+.lead-2 { margin-top: 1em; }
 .page-hero h1 { font-size: clamp(2.6rem, 8vw, 4.8rem); margin-bottom: .3em; }
 
 /* ---------- Sections ---------- */

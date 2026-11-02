@@ -43,6 +43,7 @@ pages:
     title: About
     eyebrow: The studio
     lead: "We are an independent studio crafting narrative-driven games defined by psychological depth, handcrafted aesthetics, and haunting storytelling."
+    lead_2: "Moving away from generic digital polish, we treat our games as tactile, immersive spaces where expressive art direction and psychological tension intertwine. We build interactive experiences that linger in the mind long after the screen goes dark."
     description: "We are an independent studio crafting narrative-driven games defined by psychological depth, handcrafted aesthetics, and haunting storytelling."
   contact:
     title: Contact
@@ -68,14 +69,13 @@ home:
   works_title: Games we've made
   about_eyebrow: About the studio
   about_title: Founded in 2024, built on narrative
-  about_text: Umigame was founded at an incubation center in Türkiye. We specialise in story-oriented games, and our team consists of five dedicated members.
+  about_text: "We are an independent studio crafting narrative-driven games defined by psychological depth, handcrafted aesthetics, and haunting storytelling."
+  about_text_2: "Moving away from generic digital polish, we treat our games as tactile, immersive spaces where expressive art direction and psychological tension intertwine. We build interactive experiences that linger in the mind long after the screen goes dark."
   about_more: More about us
   cta_title: Open to collaboration
   cta_text: Have an idea, a project or a partnership in mind? We'd love to hear it.
   cta_btn: Contact us
 about:
-  approach_title: Our approach
-  approach_text: "Moving away from generic digital polish, we treat our games as tactile, immersive spaces where expressive art direction and psychological tension intertwine. We build interactive experiences that linger in the mind long after the screen goes dark."
   cta_title: See what we've made
   cta_btn: Explore our works
 contact:
