@@ -2,6 +2,7 @@
 {%- if page.lang == "tr" -%}{%- assign works = site.works_tr | sort: "order" -%}{%- else -%}{%- assign works = site.works | sort: "order" -%}{%- endif -%}
 {%- assign featured = works | where: "featured", true | first -%}
 <section class="hero">
+  {% include cover-drift.html class="hero-bg" %}
   <div class="container hero-inner">
     <p class="eyebrow">{{ t.home.eyebrow }}</p>
     <h1>{{ t.home.title_a }}<br>{{ t.home.title_b }} <em>{{ t.home.title_c }}</em></h1>

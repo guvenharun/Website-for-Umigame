@@ -34,7 +34,7 @@
   <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
   <link rel="preload" href="{{ '/assets/fonts/Swiss721BT-BoldCondensed.ttf' | relative_url }}" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/CaveatBrush-wordmark.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <script>document.documentElement.className = 'js';</script>
   {%- if page.ref == "home" %}
   <script>(function(){try{var d=document.documentElement;if(!sessionStorage.getItem('umigame-splash')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('splash-on');sessionStorage.setItem('umigame-splash','1')}}catch(e){}})();</script>
@@ -48,6 +48,6 @@
     {{ content }}
   </main>
   {% include footer.html %}
-  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </body>
 </html>

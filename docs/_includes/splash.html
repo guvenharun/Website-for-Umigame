@@ -1,15 +1,7 @@
 {%- comment -%} Intro screen, Home only. Shown once per browser session (see head script in default.html + main.js). {%- endcomment -%}
 {%- assign t = site.data.i18n[page.lang] -%}
-{%- if page.lang == "tr" -%}{%- assign covers = site.works_tr | sort: "order" -%}{%- else -%}{%- assign covers = site.works | sort: "order" -%}{%- endif -%}
 <div class="splash" id="splash" role="dialog" aria-label="Umigame">
-  <div class="splash-bg" aria-hidden="true">
-    <div class="splash-row">
-      {%- for round in (1..2) -%}{%- for c in covers -%}<img src="{{ c.cover | relative_url }}" alt="" width="1280" height="720" decoding="async">{%- endfor -%}{%- endfor -%}
-    </div>
-    <div class="splash-row splash-row-rev">
-      {%- for round in (1..2) -%}{%- for c in covers reversed -%}<img src="{{ c.cover | relative_url }}" alt="" width="1280" height="720" decoding="async">{%- endfor -%}{%- endfor -%}
-    </div>
-  </div>
+  {% include cover-drift.html class="splash-bg" %}
   <div class="splash-content">
     <img class="splash-logo" src="{{ '/assets/img/logo-mark-light.png' | relative_url }}" alt="" width="270" height="380">
     <p class="splash-name">umigame</p>
