@@ -78,12 +78,6 @@ about:
   who_title: Who we are
   who_1: Our studio, Umigame, was founded in 2024 at an incubation center in Türkiye. Our team consists of five dedicated members.
   who_2: We aim to create enjoyable games that provide unique experiences for players. Our collection includes a variety of genres, each developed with care. We are on a journey to improve and explore new ideas, and we appreciate your support along the way.
-  what_eyebrow: What we do
-  what_title: Story-driven game development
-  values:
-    - { title: Narrative-driven design, text: "We specialise in story-oriented games in which choices, characters and atmosphere shape the player's experience." }
-    - { title: Range across genres, text: "From RPG adventures and visual novels to psychological horror and survival-management simulation, each project takes the form that best serves its story." }
-    - { title: Built for a global audience, text: "Our games are released with multi-language support, ranging from 6 to 15 languages per title." }
   stat_founded: Founded
   stat_team: Team members
   stat_games: Games
