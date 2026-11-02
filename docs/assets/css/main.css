@@ -196,6 +196,21 @@ h1 em { font-style: normal; color: var(--accent); }
 .feature-body .card-cta { margin-top: auto; text-decoration: none; color: var(--accent-hover); font-weight: 600; font-size: .9rem; }
 .feature-body .card-cta:hover { text-decoration: underline; }
 
+/* ---------- Gallery + lightbox ---------- */
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
+.gallery-item { display: block; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 8px; border: 1px solid var(--line); background: var(--surface-2); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease, opacity .2s; }
+.gallery-item:hover img { transform: scale(1.05); }
+.lightbox { position: fixed; inset: 0; z-index: 2000; display: grid; place-items: center; background: rgba(5, 5, 7, .94); padding: 56px 12px; }
+.lightbox-img { max-width: min(96vw, 1400px); max-height: calc(100vh - 120px); width: auto; height: auto; border-radius: 6px; box-shadow: 0 10px 50px rgba(0,0,0,.6); }
+.lightbox button { position: absolute; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--line); background: rgba(20,20,24,.85); color: var(--text); font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.lightbox button:hover { border-color: var(--accent); color: var(--accent-hover); }
+.lightbox-close { top: max(12px, env(safe-area-inset-top)); right: 12px; }
+.lightbox-prev, .lightbox-next { top: 50%; transform: translateY(-50%); }
+.lightbox-prev { left: 8px; } .lightbox-next { right: 8px; }
+.lightbox-count { position: absolute; bottom: max(14px, env(safe-area-inset-bottom)); left: 0; right: 0; text-align: center; color: var(--muted); font-size: .85rem; margin: 0; }
+html.lightbox-open { overflow: hidden; }
+
 /* ---------- Work page ---------- */
 .work-hero-grid { display: grid; gap: 28px; align-items: center; }
 .work-cover img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
@@ -235,7 +250,12 @@ h1 em { font-style: normal; color: var(--accent); }
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--line); background: var(--surface); padding-top: 48px; }
 .footer-inner { display: grid; gap: 32px; }
+.footer-about { display: grid; gap: 18px; align-content: start; }
 .footer-brand { display: flex; gap: 14px; align-items: center; }
+.footer-block { max-width: 24rem; }
+.footer-block p { margin: 0 0 .3em; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+.footer-block a { display: inline-block; padding: 8px 0; color: var(--accent-hover); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+.footer-block a:hover { text-decoration: underline; }
 .footer-brand img { height: 47px; width: auto; }
 .footer-brand p { margin: 0; line-height: 1.25; }
 .footer-name { display: block; font-family: var(--font-brand); font-size: 2rem; line-height: 1; }
@@ -244,7 +264,7 @@ h1 em { font-style: normal; color: var(--accent); }
 .footer-nav a { text-decoration: none; color: var(--muted); display: inline-block; padding: 8px 0; }
 .footer-nav a:hover { color: var(--text); }
 .footer-legal {
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px;
+  display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 6px 20px;
   margin-top: 36px; padding-block: 20px calc(20px + env(safe-area-inset-bottom));
   border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem;
 }
@@ -254,12 +274,12 @@ h1 em { font-style: normal; color: var(--accent); }
 
 /* ---------- Intro / splash (Home, once per session) ---------- */
 .splash { display: none; }
-html.splash-on { overflow: hidden; animation: splash-unlock 0s linear 4.5s forwards; } /* failsafe if JS never runs */
+html.splash-on { overflow: hidden; animation: splash-unlock 0s linear 3.5s forwards; } /* failsafe if JS never runs */
 html.splash-on .splash {
   display: grid; place-items: center; position: fixed; inset: 0; z-index: 1000; overflow: hidden;
   background: var(--bg); color: var(--text);
   transition: opacity .7s ease, transform .7s ease, visibility .7s;
-  animation: splash-failsafe .7s ease 4.2s forwards;
+  animation: splash-failsafe .7s ease 3.2s forwards;
 }
 html.splash-on .splash.is-leaving { opacity: 0; transform: scale(1.04); visibility: hidden; pointer-events: none; }
 @keyframes splash-failsafe { to { opacity: 0; visibility: hidden; pointer-events: none; } }
@@ -285,13 +305,9 @@ html.splash-on .splash.is-leaving { opacity: 0; transform: scale(1.04); visibili
 .splash-logo { height: clamp(100px, 22vh, 190px); width: auto; margin: 0 auto; animation: splash-logo-in .8s cubic-bezier(.2,.7,.2,1) both; }
 .splash-name { font-family: var(--font-brand); font-size: clamp(3.2rem, 11vw, 6rem); line-height: 1; margin-top: .1em !important; animation: splash-rise .7s ease .3s both; }
 .splash-studios { font-size: clamp(.7rem, 1.8vw, .95rem); font-weight: 600; letter-spacing: .6em; text-indent: .6em; text-transform: uppercase; color: var(--accent); margin-top: .5em !important; animation: splash-rise .7s ease .5s both; }
-.splash-tagline { margin-top: clamp(24px, 5vh, 44px) !important; font-family: var(--font-display); text-transform: uppercase; font-size: clamp(1.3rem, 4.6vw, 2.5rem); letter-spacing: .04em; line-height: 1.2; }
-.splash-tagline .w { display: inline-block; animation: splash-word .55s ease both; animation-delay: calc(.9s + var(--i) * .12s); }
-.splash-tagline .w-accent { color: var(--accent); }
 @keyframes splash-logo-in { from { opacity: 0; transform: scale(.86) translateY(10px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
 @keyframes splash-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-@keyframes splash-word { from { opacity: 0; transform: translateY(16px); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
-.splash-progress { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; height: 3px; background: var(--accent); transform-origin: left; animation: splash-fill 3.3s linear forwards; }
+.splash-progress { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; height: 3px; background: var(--accent); transform-origin: left; animation: splash-fill 2.4s linear forwards; }
 @keyframes splash-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 .splash-skip {
   position: absolute; z-index: 3; right: max(20px, env(safe-area-inset-right)); bottom: calc(22px + env(safe-area-inset-bottom));
@@ -318,6 +334,7 @@ html.splash-on .splash.is-leaving { opacity: 0; transform: scale(1.04); visibili
   .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
   .split { grid-template-columns: 1fr 1.6fr; gap: 48px; }
   .work-body { grid-template-columns: 1.6fr 1fr; gap: 56px; }
+  .gallery { grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .values { grid-template-columns: repeat(3, 1fr); }
   .contact-cards { grid-template-columns: 1fr 1fr; }
   .work-hero-grid { grid-template-columns: 1.1fr 1fr; gap: 48px; }

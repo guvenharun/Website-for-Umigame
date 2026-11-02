@@ -15,6 +15,7 @@ release: "Q4 2026"
 links:
   - { label: "Wishlist on Steam", url: "https://store.steampowered.com/app/2168120/Anomalistic_Revolution/" }
   - { label: "Play on itch.io", url: "https://umigamestudios.itch.io/anomalistic-revolution" }
+screens: 6
 # Optional künye fields: developer, platforms, release
 ---
 As a software developer, you've created a program that provides correct answers to all questions. Now you want to test this invention by solving the city's biggest mystery. But seeking the absolute truth in the enigmatic realm of zeros and ones comes with a price. Your choices may steer you toward either inner peace or inner chaos.

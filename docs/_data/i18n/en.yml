@@ -24,6 +24,13 @@ ui:
   footer_tag: Independent game studio · Türkiye
   rights: All rights reserved.
   not_found_back: Back to home
+  gallery: Gallery
+  screenshot: Screenshot
+  close: Close
+  prev: Previous
+  next: Next
+  hosted_at: We operate under ODTÜ Teknokent ATOM.
+  address: ""   # street address shown in the footer when filled in
 site:
   description: Umigame is an independent game studio from Türkiye making story-driven games, including Anomalistic Revolution.
 pages:
@@ -48,7 +55,6 @@ pages:
     eyebrow: "404"
     lead: That page doesn't exist or has moved.
 splash:
-  tagline: We make games that tell stories.
   studios: Studios
   skip: Skip intro
 home:
@@ -66,19 +72,19 @@ home:
   about_title: Founded in 2024, built on narrative
   about_text: Umigame was founded at an incubation center in Türkiye. We specialise in story-oriented games, and our team consists of five dedicated members.
   about_more: More about us
-  cta_title: Want to work with us?
-  cta_text: Send your resume and portfolio and tell us what you'd like to build together.
+  cta_title: Open to collaboration
+  cta_text: Have an idea, a project or a partnership in mind? We'd love to hear it.
   cta_btn: Contact us
 about:
   who_title: Who we are
   who_1: Our studio, Umigame, was founded in 2024 at an incubation center in Türkiye. Our team consists of five dedicated members.
   who_2: We aim to create enjoyable games that provide unique experiences for players. Our collection includes a variety of genres, each developed with care. We are on a journey to improve and explore new ideas, and we appreciate your support along the way.
   what_eyebrow: What we do
-  what_title: How we make games
+  what_title: Story-driven game development
   values:
-    - { title: Story first, text: "We specialise in story-oriented games, where choices and characters drive the experience." }
-    - { title: Many genres, text: "From RPG adventures and visual novels to psychological horror and survival-management games." }
-    - { title: Made with care, text: "Every game is developed with care, and we keep improving and exploring new ideas." }
+    - { title: Narrative-driven design, text: "We specialise in story-oriented games in which choices, characters and atmosphere shape the player's experience." }
+    - { title: Range across genres, text: "From RPG adventures and visual novels to psychological horror and survival-management simulation, each project takes the form that best serves its story." }
+    - { title: Built for a global audience, text: "Our games are released with multi-language support, ranging from 6 to 15 languages per title." }
   stat_founded: Founded
   stat_team: Team members
   stat_games: Games
@@ -86,7 +92,7 @@ about:
   cta_btn: Explore our works
 contact:
   collab_title: Collaborations
-  collab_text: "If you are interested in collaborating, please send your resume and portfolio to:"
+  collab_text: "If you're interested in collaborating with us, write to:"
   collab_btn: Send an email
   collab_subject: Collaboration
   community_title: Join the community
