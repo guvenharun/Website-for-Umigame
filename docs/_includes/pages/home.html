@@ -45,7 +45,7 @@
       <a class="btn btn-link" href="{{ t.base | append: '/works/' | relative_url }}">{{ t.ui.view_all }} <span aria-hidden="true">→</span></a>
     </div>
     <div class="feature-grid">
-      {% for w in works %}{% include work-feature.html work=w %}{% endfor %}
+      {% for w in works %}{% include work-feature.html work=w compact=true %}{% endfor %}
     </div>
   </div>
 </section>
